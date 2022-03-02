@@ -2,10 +2,33 @@
     display: flex;
     flex-direction: column;
 
-    background-color: #0A1428;
-    color: white;
+    padding: 2em 0;
 
     &__container {
         display: flex;
+        align-items: center;
+    }
+
+    ul {
+        display: flex;
+        margin-left: auto;
+
+        margin-right: 2em;
+
+        li {
+            display: flex;
+            transition: .4s;
+
+            width: fit-content;
+            height: fit-content;
+
+            &:not(:last-child) { margin-right: 1.25em }
+
+            a {
+                font-size: 0.8em;
+            }
+
+            &:hover { color: $franceBlue }
+        }
     }
 }
