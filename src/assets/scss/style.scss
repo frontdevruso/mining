@@ -1,0 +1,21 @@
+@import "vars";
+@import "mixins";
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: white;
+    font-family: 'Geometria', serif;
+
+    font-weight: 400;
+    font-size: 30px;
+    min-width: 320px;
+}
+
+@import 'fonts';
+@import 'global';
+
+@import "./limbs/header.scss";
+@import "./limbs/footer.scss";

@@ -1,0 +1,25 @@
+@mixin breakpoint($bp) {
+    
+    @media (max-width: $bp) {
+        @content;
+    }
+
+}
+
+@mixin make-container($width) {
+    max-width: $width;
+    padding: 0 15px;
+
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@mixin font-face($font-family, $url, $weight, $style) {
+    @font-face {
+        font-family: "#{$font-family}";
+        src:url('../fonts/#{$url}.woff') format('woff');
+        font-weight: #{$weight};
+        font-style: #{$style};
+        font-display: swap;
+    }
+}
