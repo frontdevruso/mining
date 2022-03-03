@@ -1,0 +1,42 @@
+.lang-switcher {
+    display: flex;
+
+    &__btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        color: $franceBlue;
+        background-color: transparent;
+        border: 0.05em solid $franceBlue;
+        padding: 5px 8px;
+
+        font-weight: 500;
+        font-size: 0.7em;
+        line-height: 110%;
+
+        transition: .4s;
+
+        &:first-child { border-right: none }
+        &:last-child { border-left: none }
+
+        &.active {
+            background-color: $franceBlue;
+            color: white;
+        }
+    }
+}
+
+[data-language-switcher="ru"] {
+    .lang-switcher__btn--ru {
+        background-color: $franceBlue;
+        color: white;
+    }
+}
+
+[data-language-switcher="en"] {
+    .lang-switcher__btn--en {
+        background-color: $franceBlue;
+        color: white;
+    }
+}
