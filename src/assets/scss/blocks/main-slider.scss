@@ -1,0 +1,18 @@
+.main-slider {
+    width: 633px;
+    height: 533px;
+
+    margin: 0 0 0 auto;
+
+    .swiper-slide {
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background-color: aliceblue;
+        color: black;
+    }
+}

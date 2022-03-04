@@ -1,0 +1,60 @@
+.equipment {
+    display: flex;
+
+    padding-bottom: 5em;
+
+    h1 { margin-bottom: 1.5em }
+
+    &__table {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 1em;
+
+        height: fit-content;
+
+        &-item {
+            border: 0.05em solid #647391;
+            padding: 1.5em;
+            
+            height: 12.5em;
+            box-sizing: border-box;
+
+            display: flex;
+            flex-direction: column;
+            transition: .4s;
+
+            &-img {
+                width: 100%;
+                height: 100%;
+
+                display: flex;
+                align-items: center;
+
+                img {
+                    width: auto;
+                    height: auto;
+                    
+                    max-width: 180px;
+                    max-height: 120px;
+                    margin: auto 0;
+                }
+            }
+
+            &-title {
+                line-height: 125%;
+                font-size: 0.9em;
+
+                margin-top: auto;
+                transition: .4s;
+            }
+
+            &:hover {
+                border-color: $franceBlue;
+                
+                .equipment__table-item-title {
+                    color: $franceBlue;
+                }
+            }
+        }
+    }
+}
