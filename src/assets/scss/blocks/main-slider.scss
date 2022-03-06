@@ -1,18 +1,88 @@
 .main-slider {
-    width: 633px;
+    width: 100%;
     height: 533px;
+    max-width: 18.15em;
 
-    margin: 0 0 0 auto;
+    margin: 0 auto 0 0;
+    
+    &__item {
+        color: white;
+        max-width: 18.15em;
 
-    .swiper-slide {
-        width: 100%;
-        height: 100%;
+        &-info {
+            display: flex;
+            flex-direction: column;
 
-        display: flex;
-        align-items: center;
-        justify-content: center;
+            padding: 1.5em 0 0 2em;
 
-        background-color: aliceblue;
-        color: black;
+            img {
+                width: 100%;
+                max-width: 18.15em;
+            }
+    
+            h3 {
+                font-weight: 400;
+                font-size: 1em;
+    
+                margin-bottom: 0.25em;
+            }
+    
+            p {
+                font-size: 0.7em;
+                max-width: 22em;
+                line-height: 150%;
+
+                margin-bottom: 1.42em;
+    
+                b { color: $franceBlue }
+            }
+
+            a {
+                font-size: 0.7em;
+                width: fit-content;
+
+                padding: 0.71em 1.42em;
+            }
+        }
+    }
+
+    &__pagination {
+    
+        .swiper-pagination-bullet {
+            display: inline-block;
+            width: 2px;
+            height: 25px;
+            border-radius: 10px;
+            background-color: #647391;
+            opacity: 0.7;
+            transition: background-color 0.3s;
+            cursor: pointer;
+    
+            &-active {
+                opacity: 1;
+                background-color: $franceBlue;
+            }
+        }
+    }
+
+    &__navigation {
+        width: fit-content;
+
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+
+        &-fraction {
+            position: initial;
+            width: fit-content;
+            margin: 0;
+
+            font-size: 0.6em;
+
+            .swiper-pagination-current {
+                font-size: 32px;
+            }
+        }
     }
 }

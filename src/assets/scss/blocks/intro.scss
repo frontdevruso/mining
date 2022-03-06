@@ -1,9 +1,81 @@
 .intro {
+    padding-bottom: 9em;
+    overflow: hidden;
 
     &__container {
         display: flex;
+        align-items: center;
         width: 100%;
 
         padding-right: 1.5em;
+        position: relative;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+
+        width: 100%;
+        max-width: 432px;
+
+        &-heading {
+            font-weight: 500;
+            line-height: 120%;
+            font-size: 1.6em;
+
+            &--blue {
+                font-weight: 500;
+                color: $franceBlue;
+
+                font-size: 1.6em;
+                width: fit-content;
+
+                b { color: white; position: absolute; }
+
+                &::after {
+                    content: "";
+                    display: block;
+                    
+                    margin-top: 4px;
+
+                    width: 100%;
+                    height: 8px;
+
+                    background-image: url('./../images/svg/text-curves.svg');
+                    background-size: auto 100%;
+                    background-repeat: repeat;
+                }
+            }
+        }
+
+        p {
+            font-size: 0.8em;
+            color: $niche;
+
+            line-height: 140%;
+            padding: 1.875em 0;
+
+            span {
+                color: $franceBlue;
+            }
+        }
+
+        a {
+            font-size: 0.8em;
+
+            display: flex;
+            width: fit-content;
+
+            padding: 0.9375em 1.25em;
+        }
+    }
+
+    &__mechanism {
+        width: 100%;
+
+        position: relative;
+        
+        padding-left: 6em;
+        padding-top: 6em;
     }
 }

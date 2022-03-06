@@ -1,0 +1,15 @@
+.circle-shadow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+        width: 750px;
+        height: 750px;
+    
+        display: block;
+        position: absolute;
+        right: 16%;
+        top: 4%;
+    }
+}

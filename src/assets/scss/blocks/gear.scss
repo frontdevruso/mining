@@ -1,0 +1,20 @@
+.gear__wrapper {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -40%;
+    
+    width: 549px;
+    height: 567px;
+    -webkit-mask-image: linear-gradient(89.86deg, #647391 -5.71%, rgba(10, 20, 40, 0) 48.59%);
+    mask-image: linear-gradient(89.86deg, #647391 -5.71%, rgba(10, 20, 40, 0) 48.59%);
+
+    mask-composite: intersect;
+    padding-left: .5em;
+
+    .gear {
+        fill: #647391;
+        transition: 1s ease;
+        transform: rotate(100deg);
+    }
+}

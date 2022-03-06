@@ -43,6 +43,8 @@ input:focus, textarea:focus, button:focus {
 
 .none { display: none !important }
 
+.page { position: relative }
+
 .container__1200px {
     width: 100%;
     max-width: 1200px;
@@ -55,4 +57,31 @@ input:focus, textarea:focus, button:focus {
 .g-title {
     font-size: 1.6em;
     font-weight: 500;
+}
+
+.g-blue-btn {
+    background-color: $franceBlue;
+    color: white;
+
+    line-height: 110%;
+    font-weight: 400;
+    transition: .4s;
+
+    &:hover {
+        background-color: #2469BB;
+    }
+}
+
+.g-transparent-btn {
+    background-color: transparent;
+    border: 1px solid $franceBlue;
+
+    color: $franceBlue;
+    font-weight: 400;
+    transition: .4s;
+
+    &:hover {
+        background-color: $franceBlue;
+        color: white;
+    }
 }
