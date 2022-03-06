@@ -3,13 +3,15 @@
     align-items: center;
     justify-content: center;
 
+    position: relative;
+
     img {
         width: 750px;
         height: 750px;
     
         display: block;
         position: absolute;
-        right: 16%;
-        top: 4%;
+        right: 1%;
+        top: -100px;
     }
 }

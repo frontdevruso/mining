@@ -1,8 +1,11 @@
 if (document.querySelector('.main-slider')) {    
+    const gear = document.getElementById('gear');
+
     let mainSlider = new Swiper('.main-slider', {
         direction: 'vertical',
         slidesPerView: 1,
         spaceBetween: 120,
+        speed: 600,
     
         pagination: {
             el: ".main-slider__navigation-fraction",
@@ -17,10 +20,16 @@ if (document.querySelector('.main-slider')) {
     });
 
     mainSlider.on('slidePrevTransitionStart', function() {
-        console.log('Prev slide');
+        const currentPosition = document.getElementById('gear').getAttribute('data-position');
+        const newPosition = Number(currentPosition) + 35;
+        gear.setAttribute('data-position', Number(currentPosition) + 35);
+        gear.style.transform = "rotate(" + newPosition + "deg)";
     });
     
     mainSlider.on('slideNextTransitionStart', function() {
-        console.log('Next slide');
+        const currentPosition = document.getElementById('gear').getAttribute('data-position');
+        const newPosition = Number(currentPosition) + -35;
+        gear.setAttribute('data-position', Number(currentPosition) + -35);
+        gear.style.transform = "rotate(" + newPosition + "deg)";
     });
 }

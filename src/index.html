@@ -23,21 +23,28 @@ title: Гормаш Глобал
     </div>
     <div class="intro__mechanism">
       <div class="gear__wrapper">
-        <svg class="gear" width="549" height="567">
+        <svg id="gear" class="gear" style="transform: rotate(0deg);" data-position="15" width="549" height="567">
           <use xlink:href="./assets/images/svg/sprite.svg#gear"></use>
         </svg>
       </div>
       <div class="main-slider__navigation">
         <div class="main-slider__navigation-wrapper">
+          <button class="main-slider__navigation-arrow main-slider__navigation-arrow--next">
+            <svg><use xlink:href="./assets/images/svg/sprite.svg#sliderArrow"></use></svg>
+          </button>
           <div class="swiper-pagination main-slider__navigation-fraction"></div>
-          <!-- <div class="main-slider__navigation-arrows">
-            <button class="main-slider__navigation-arrow--prev">
-              <svg><use xlink:href="./assets/images/svg/sprite.svg#sliderArrow"></use></svg>
-            </button>
-            <button class="main-slider__navigation-arrow--next">
-              <svg><use xlink:href="./assets/images/svg/sprite.svg#sliderArrow"></use></svg>
-            </button>
-          </div> -->
+          <button class="main-slider__navigation-arrow main-slider__navigation-arrow--prev">
+            <svg><use xlink:href="./assets/images/svg/sprite.svg#sliderArrow"></use></svg>
+          </button>
+        </div>
+        <div class="main-slider__navigation-lines">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span class="active"></span>
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
       </div>
       <div class="main-slider swiper">
