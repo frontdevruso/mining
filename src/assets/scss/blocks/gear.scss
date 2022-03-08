@@ -16,4 +16,17 @@
         fill: #647391;
         transition: 1s ease;
     }
+
+    @media (max-width: 1300px) { 
+        display: none;
+    }
+
+    @media (max-width: 1024px) { 
+        display: flex;
+        right: -10%;
+    }
+
+    @media (max-width: 800px) { 
+        right: -20%;
+    }
 }

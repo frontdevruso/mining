@@ -49,7 +49,6 @@
     }
 
     &__pagination {
-    
         .swiper-pagination-bullet {
             display: inline-block;
             width: 2px;
@@ -139,6 +138,10 @@
                 &:nth-child(2) { opacity: .5 }
                 &:nth-child(6) { opacity: .5 }
             }
+        }
+
+        @media (max-width: 1300px) { 
+            right: 20%;
         }
     }
 }

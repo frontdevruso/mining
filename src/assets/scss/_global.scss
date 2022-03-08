@@ -43,7 +43,7 @@ input:focus, textarea:focus, button:focus {
 
 .none { display: none !important }
 
-.page { position: relative }
+.page { position: relative; overflow: hidden; }
 
 .container__1200px {
     width: 100%;
@@ -52,11 +52,19 @@ input:focus, textarea:focus, button:focus {
 
     margin-right: auto;
     margin-left: auto;
+
+    @media (max-width: 575px) { 
+        padding: 0 25px;
+    }
 }
 
 .g-title {
     font-size: 1.6em;
     font-weight: 500;
+
+    @media (max-width: 768px) { font-size: 28px }
+    @media (max-width: 575px) { font-size: 25px }
+    @media (max-width: 400px) { font-size: 20px }
 }
 
 .g-blue-btn {

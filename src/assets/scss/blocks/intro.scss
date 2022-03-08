@@ -9,6 +9,10 @@
 
         padding-right: 1.5em;
         position: relative;
+
+        @media (max-width: 1024px) { 
+            flex-direction: column-reverse;
+        }
     }
 
     &__info {
@@ -77,5 +81,28 @@
         
         padding-left: 6em;
         padding-top: 6em;
+
+        &-img {
+            position: absolute;
+
+            &--top {
+                width: 6.4em;
+                height: auto;
+
+                top: 0;
+                right: 28%;
+            }
+
+            &--bottom {
+                width: 6.6em;
+                height: auto;
+
+                bottom: -10%;
+                right: 22%;
+            }
+        }
+
+        @media (max-width: 1150px) { padding-left: 4em }
+        @media (max-width: 1100px) { padding-left: 2em }
     }
 }

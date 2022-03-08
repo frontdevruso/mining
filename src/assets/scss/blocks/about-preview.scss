@@ -2,7 +2,14 @@
     display: flex;
     flex-direction: column;
 
-    padding-bottom: 5em;
+    margin-bottom: 5em;
+
+    &__container {
+        overflow: hidden;
+        @media (max-width: 1300px) { 
+            padding: 0;
+        }
+    }
 
     &__info {
         margin-top: auto;
@@ -37,6 +44,28 @@
             }
 
             span { font-weight: 400 }
+        }
+
+        @media (max-width: 1300px) { 
+            padding-left: 2.5em;
+            background: linear-gradient(90deg, #0A1428 12%, rgba(10, 20, 40, 0.7) 40.98%, rgba(10, 20, 40, 0) 73.04%);
+        }
+
+        @media (max-width: 768px) { 
+            background: linear-gradient(359.89deg, #0A1428 7.89%, rgba(10, 20, 40, 0.7) 37.53%, rgba(10, 20, 40, 0) 90%);
+            padding-bottom: 2em;
+
+            h1 { margin-bottom: 0.75em }
+            p { font-size: 0.8em }
+        }
+
+        @media (max-width: 575px) { 
+            padding: 0 1.25em;
+            p { font-size: 0.8em }
+        }
+
+        @media (max-width: 400px) { 
+            p { max-width: 286px }
         }
     }
 

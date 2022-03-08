@@ -1,7 +1,10 @@
 .equipment {
     display: flex;
-
     padding-bottom: 5em;
+
+    @media (max-width: 1300px) { font-size: 0.9em }
+    @media (max-width: 1150px) { font-size: 0.8em }
+    @media (max-width: 1024px) { font-size: 1em }
 
     h1 { margin-bottom: 1.5em }
 
@@ -24,19 +27,45 @@
             transition: .4s;
 
             &-img {
-                width: 100%;
-                height: 100%;
+                width: fit-content;
+                height: fit-content;
 
                 display: flex;
                 align-items: center;
+
+                margin: auto 0;
 
                 img {
                     width: auto;
                     height: auto;
                     
-                    max-width: 180px;
-                    max-height: 120px;
+                    max-width: 9em;
+                    max-height: 6em;
+
                     margin: auto 0;
+                }
+
+                @media (max-width: 1024px) { 
+                    margin: 0 auto;
+                    img { margin: 0; max-width: 120px; }
+                }
+
+                @media (max-width: 900px) { 
+                    margin: auto 0;
+
+                    img { 
+                        margin: auto 0; 
+                        max-width: initial; 
+                        max-height: 100px; 
+                    }
+                }
+
+                @media (max-width: 575px) { 
+                    img { height: auto; width: 100%;}
+                }
+
+                @media (max-width: 400px) { 
+                    img { width: 80% }
                 }
             }
 
@@ -46,6 +75,28 @@
 
                 margin-top: auto;
                 transition: .4s;
+                width: fit-content;
+
+                @media (max-width: 1024px) { margin-top: initial }
+
+                @media (max-width: 900px) { 
+                    margin-top: auto;
+                    padding-top: 1em;
+                    line-height: 140%;
+                }
+
+                @media (max-width: 768px) { 
+                    font-size: 0.7em;
+                    padding-top: 0.5em;
+                }
+
+                @media (max-width: 400px) { 
+                    font-size: 12px;
+                }
+
+                @media (max-width: 375px) { 
+                    font-size: 10px;
+                }
             }
 
             &:hover {
@@ -55,6 +106,45 @@
                     color: $franceBlue;
                 }
             }
+
+            @media (max-width: 1024px) { 
+                display: grid;
+                grid-template-columns: 0.7fr 1fr;
+                grid-gap: 0.75em;
+
+                align-items: center;
+                height: initial;
+
+                padding: 0.75em;
+            }
+
+            @media (max-width: 900px) { 
+                grid-template-columns: none;
+                grid-gap: initial;
+
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                align-items: center;
+
+                padding: 1em 1.5em;
+            }
+
+            @media (max-width: 575px) { 
+                text-align: left;
+                align-items: initial;
+
+                padding: 0.75em 0.5em 0.75em 0.75em;
+            }
+        }
+
+        @media (max-width: 1024px) { 
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media (max-width: 768px) { 
+            grid-template-columns: calc(50% - 2.5px) calc(50% - 2.5px);
+            grid-gap: 5px;
         }
     }
 }
