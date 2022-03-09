@@ -26,7 +26,6 @@
         right: -10%;
     }
 
-    @media (max-width: 800px) { 
-        right: -20%;
-    }
+    @media (max-width: 900px) { right: -15% }
+    @media (max-width: 800px) { right: -20% }
 }

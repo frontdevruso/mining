@@ -47,12 +47,13 @@ input:focus, textarea:focus, button:focus {
 
 .container__1200px {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1300px;
     padding: 0 50px;
 
     margin-right: auto;
     margin-left: auto;
 
+    box-sizing: border-box;
     @media (max-width: 575px) { 
         padding: 0 25px;
     }
