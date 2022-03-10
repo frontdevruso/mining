@@ -13,5 +13,10 @@
         position: absolute;
         right: 1%;
         top: -100px;
+
+        @media (max-width: 1024px) { 
+            right: 50%;
+            transform: translateX(50%);
+        }
     }
 }

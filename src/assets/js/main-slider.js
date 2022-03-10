@@ -2,7 +2,7 @@ if (document.querySelector('.main-slider')) {
     const gear = document.getElementById('gear');
 
     let mainSlider = new Swiper('.main-slider', {
-        direction: 'vertical',
+        direction: 'horizontal',
         slidesPerView: 1,
         spaceBetween: 120,
         speed: 600,
@@ -17,6 +17,11 @@ if (document.querySelector('.main-slider')) {
             nextEl: ".main-slider__navigation-arrow--prev",
             prevEl: ".main-slider__navigation-arrow--next",
         },
+        breakpoints: {
+            575: {
+                direction: 'vertical',
+            },
+        }
     });
 
     mainSlider.on('slidePrevTransitionStart', function() {

@@ -23,9 +23,10 @@
 
     @media (max-width: 1024px) { 
         display: flex;
-        right: -10%;
+        right: -29%;
     }
 
-    @media (max-width: 900px) { right: -15% }
-    @media (max-width: 800px) { right: -20% }
+    @media (max-width: 900px) { right: -32% }
+    @media (max-width: 800px) { right: -38% }
+    @media (max-width: 768px) { display: none }
 }
