@@ -65,7 +65,11 @@ input:focus, textarea:focus, button:focus {
 
     @media (max-width: 768px) { font-size: 28px }
     @media (max-width: 575px) { font-size: 25px }
-    @media (max-width: 400px) { font-size: 20px }
+    @media (max-width: 400px) { font-size: 20px; font-weight: 400; }
+}
+
+.g-paragraph {
+    color: $niche;
 }
 
 .g-blue-btn {

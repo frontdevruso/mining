@@ -69,6 +69,7 @@
 
     &__navigation {
         width: fit-content;
+        height: 3.7em;
 
         position: absolute;
         right: 0;
@@ -154,13 +155,20 @@
             flex-direction: column;
 
             margin-left: 1.5em;
+            transition: .4s ease;
+
+            overflow: hidden;
+            .new-created { height: 0 }
 
             span {
                 width: 0.1em;
                 height: 1.5em;
                 
+                transition: .6s ease;
                 background-color: #647391;
                 opacity: .7;
+
+                display: flex;
 
                 &.active { background-color: $franceBlue; opacity: 1; }
                 &:not(:last-child) { margin-bottom: 0.5em }
