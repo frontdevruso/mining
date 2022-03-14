@@ -1,7 +1,6 @@
 .header {
     display: flex;
     flex-direction: column;
-    overflow: hidden;
 
     padding: 2em 0;
     position: relative;
@@ -54,18 +53,31 @@
         @media (max-width: 1024px) { display: flex }
     }
 
-    ul {
+    &__arrow {
+        stroke: #fff;
+        width: .5em;
+        height: .3em;
+
+        margin-left: .25em;
+        transition: .4s;
+
+        &--rightLeft { transform: rotate(270deg) }
+    }
+
+    &__links {
         display: flex;
         margin-left: auto;
 
         margin-right: 2em;
 
-        @media (max-width: 1024px) { 
-            display: none;
-        }
+        @media (max-width: 1024px) { display: none }
 
         li {
             display: flex;
+            align-items: center;
+            position: relative;
+
+            cursor: pointer;
             transition: .4s;
 
             width: fit-content;
@@ -73,15 +85,31 @@
 
             &:not(:last-child) { margin-right: 1.25em }
 
+            main {
+                display: flex;
+                align-items: center;
+
+                transition: .4s;
+            }
+            
             a {
                 font-size: 0.8em;
-
-                @media (max-width: 1200px) { 
-                    font-size: 0.7em;
-                }
+                transition: .4s;
+                @media (max-width: 1200px) { font-size: 0.7em }
             }
 
-            &:hover { color: $franceBlue }
+            &:hover {
+                main {
+                    a { color: $franceBlue }
+                    svg { stroke: $franceBlue }
+                }
+
+                & .header__arrow { 
+                    &--downUp { transform: rotate(180deg) }
+                }
+
+                .header__drop-down { clip-path: initial }
+            }
         }
     }
 }

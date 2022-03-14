@@ -3,13 +3,89 @@
         <div class="header__logo">
             <img src="./assets/images/svg/logo.svg" alt="">
         </div>
-        <ul>
-            <li><a href="#">Главная</a></li>
-            <li><a href="#">О компании</a></li>
-            <li><a href="#">Оборудование</a></li>
-            <li><a href="#">Буровой инструмент</a></li>
-            <li><a href="#">Услуги</a></li>
-            <li><a href="#">Контакты</a></li>
+        <ul class="header__links">
+            <li><main><a href="#">Главная</a></main></li>
+            <li><main><a href="#">О компании</a></main></li>
+            <li>
+                <main>
+                    <a href="#">Оборудование</a>
+                    <svg class="header__arrow header__arrow--downUp"><use xlink:href="./assets/images/svg/sprite.svg#arrow"></use></svg>
+                </main>
+                <div class="header__drop-down">
+                    <div class="header__drop-down-head">
+                        <!-- ITEM -->
+                        <div class="header__drop-down-head-item">
+                            <span>Буровые установки TUMI</span>
+                            <svg class="header__arrow header__arrow--rightLeft"><use xlink:href="./assets/images/svg/sprite.svg#arrow"></use></svg>
+
+                            <ul>
+                                <a href="#">
+                                    <span>SBM 300</span>
+                                    <div class="img__container">
+                                        <img class="lozad" data-src="./assets/images/main-slider-1.webp" data-srcset="./assets/images/main-slider-1@2x.webp" alt="img">
+                                    </div>
+                                </a>
+                                <a href="#">
+                                    <span>SBM 300 SRS</span>
+                                    <div class="img__container">
+                                        <img class="lozad" data-src="./assets/images/main-slider-1.webp" data-srcset="./assets/images/main-slider-1@2x.webp" alt="img">
+                                    </div>
+                                </a>
+                                <a href="#">
+                                    <span>SBM 400</span>
+                                    <div class="img__container">
+                                        <img class="lozad" data-src="./assets/images/main-slider-1.webp" data-srcset="./assets/images/main-slider-1@2x.webp" alt="img">
+                                    </div>
+                                </a>
+                                <a href="#">
+                                    <span>SBM 700</span>
+                                    <div class="img__container">
+                                        <img class="lozad" data-src="./assets/images/main-slider-1.webp" data-srcset="./assets/images/main-slider-1@2x.webp" alt="img">
+                                    </div>
+                                </a>
+                                <a href="#">
+                                    <span>SBM 400 LP</span>
+                                    <div class="img__container">
+                                        <img class="lozad" data-src="./assets/images/main-slider-1.webp" data-srcset="./assets/images/main-slider-1@2x.webp" alt="img">
+                                    </div>
+                                </a>
+                                <a href="#">
+                                    <span>SBM 700 SR</span>
+                                    <div class="img__container">
+                                        <img class="lozad" data-src="./assets/images/main-slider-1.webp" data-srcset="./assets/images/main-slider-1@2x.webp" alt="img">
+                                    </div>
+                                </a>
+                                <a href="#">
+                                    <span>SBM 800</span>
+                                    <div class="img__container">
+                                        <img class="lozad" data-src="./assets/images/main-slider-1.webp" data-srcset="./assets/images/main-slider-1@2x.webp" alt="img">
+                                    </div>
+                                </a>
+                                <a href="#">
+                                    <span>SBM 800 XP</span>
+                                    <div class="img__container">
+                                        <img class="lozad" data-src="./assets/images/main-slider-1.webp" data-srcset="./assets/images/main-slider-1@2x.webp" alt="img">
+                                    </div>
+                                </a>
+                                <a href="#">
+                                    <span>SBM 2000</span>
+                                    <div class="img__container">
+                                        <img class="lozad" data-src="./assets/images/main-slider-1.webp" data-srcset="./assets/images/main-slider-1@2x.webp" alt="img">
+                                    </div>
+                                </a>
+                            </ul>
+                        </div>
+                        <!-- ITEM -->
+                        <div class="header__drop-down-head-item">
+                            <span>OEM-оборудование Phillips Global</span>
+                            <svg class="header__arrow header__arrow--rightLeft"><use xlink:href="./assets/images/svg/sprite.svg#arrow"></use></svg>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li><main><a href="#">Буровой инструмент</a></main></li>
+            <li><main><a href="#">Услуги</a></main></li>
+            <li><main><a href="#">Контакты</a></main></li>
         </ul>
         <form action="/" data-language-switcher="ru" class="lang-switcher">
             <button type="button" class="lang-switcher__btn lang-switcher__btn--ru">Рус</button>

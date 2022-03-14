@@ -1,0 +1,102 @@
+.header__drop-down {
+    display: flex;
+    flex-direction: column;
+
+    background-color: rgba(10, 20, 40, 0.75);
+    position: absolute;
+    bottom: 0;
+    transform: translateY(100%);
+
+    z-index: 10;
+    clip-path: polygon(0 0, 0 0, 0 0, 0 0);
+    transition: .4s;
+
+    & > * { transition: .4s }
+
+    &-head {
+        width: 300px;
+        padding-top: 0.5em;
+
+        &-item {
+            display: flex;
+            align-items: center;
+            position: relative;
+
+            padding: .75em;
+            box-sizing: border-box;
+            transition: .4s;
+
+            span { font-size: 0.7em }
+            svg { margin-left: auto }
+
+            ul {
+                position: absolute;
+                top: 0;
+                right: 0;
+                transform: translateX(100%);
+
+                margin-right: 0;
+                background-color: rgba(10, 20, 40, 0.75);
+                clip-path: polygon(0 0, 0 0, 0 0, 0 0);
+
+                a {
+                    display: flex;
+                    margin-right: 0 !important;
+                    position: static;
+
+                    width: 100%;
+                    font-size: 0.7em;
+
+                    span { 
+                        font-size: 1em; 
+                        padding: 1.0714em; 
+
+                        transition: .4s;
+                        width: 100%; 
+                    }
+
+                    .img__container {
+                        padding: 0 1.0714em;
+                        background-color: rgba(10, 20, 40, 0.75);
+
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        transform: translateX(100%);
+
+                        z-index: -15;
+                        width: 150px;
+                        height: 100%;
+
+                        transition: .4s;
+                        clip-path: polygon(0 0, 0 0, 0 0, 0 0);
+                        opacity: 0;
+
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        img {
+                            width: 100%;
+                        }
+                    }
+
+                    &:hover {
+                        span { background-color: $franceBlue }
+                        .img__container {
+                            clip-path: initial;
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+
+            &:hover {
+                background-color: $franceBlue;
+                .header__arrow--rightLeft { transform: rotate(90deg) }
+
+                ul { clip-path: initial }
+            }
+        }
+    }
+}

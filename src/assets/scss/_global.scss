@@ -43,7 +43,10 @@ input:focus, textarea:focus, button:focus {
 
 .none { display: none !important }
 
-.page { position: relative; overflow: hidden; }
+.page { 
+    position: relative; 
+    overflow: hidden; 
+}
 
 .container__1200px {
     width: 100%;
@@ -80,9 +83,7 @@ input:focus, textarea:focus, button:focus {
     font-weight: 400;
     transition: .4s;
 
-    &:hover {
-        background-color: #2469BB;
-    }
+    &:hover { background-color: #2469BB }
 }
 
 .g-transparent-btn {
@@ -97,4 +98,34 @@ input:focus, textarea:focus, button:focus {
         background-color: $franceBlue;
         color: white;
     }
+}
+
+.g-input {
+    background-color: transparent;
+    color: white;
+
+    border: 0.05em solid $niche;
+    padding: 0.9375em 1.25em;
+
+    font-size: 0.8em;
+    font-weight: 400;
+
+    &::placeholder {
+        color: $niche;
+        transition: .2s;
+    }
+
+    &:focus {
+        &::placeholder { opacity: 0 }
+    }
+}
+
+.g-input-error {
+    background-color: transparent;
+    border: 0.05em solid #922B21;
+    color: #922B21;
+
+    transition: .4s;
+
+    &::placeholder { color: #922B21 }
 }

@@ -1,0 +1,96 @@
+.contact-form {
+    display: flex;
+    padding-bottom: 5em;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__wrapper {
+        display: flex;
+        margin: 1.5em 0 0 0;
+
+        &-form {
+            display: flex;
+            flex-direction: column;
+
+            & > * {
+                margin-bottom: 0.75em;
+                &:last-child { margin-bottom: 0 }
+            }
+
+            textarea {
+                resize: none;
+                margin-bottom: 1em;
+
+                height: 7.5em;
+            }
+
+            &-policy {
+                display: flex;
+                width: 100%;
+                
+                box-sizing: initial;
+
+                input[type=checkbox] { display: none }
+
+                label {
+                    display: flex;
+                    line-height: 1;
+
+                    p { 
+                        font-size: 0.7em;
+                        color: $niche;
+                        line-height: 140%;
+
+                        user-select: none;
+                        cursor: pointer;
+                        max-width: 450px;
+                        
+                        transition: .4s;
+
+                        a {
+                            color: $franceBlue;
+                            text-decoration: underline;
+                        }
+                    }
+                }
+                
+                input[type=checkbox] + label:before {
+                    content: "";
+                    border: 1px solid $niche;
+                    display: inline-block;
+
+                    width: 1em;
+                    height: 1em;
+
+                    margin-right: 0.75em;
+                    box-sizing: border-box;
+                    cursor: pointer;
+
+                    transition: .4s;
+
+                    background-size: .6em .5em;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                }
+
+                input[type=checkbox]:checked + label::before { background-image: url('./../images/svg/policyCheck.svg') }
+
+                & .policy-error {
+                    p { color: #922B21 }
+                    &::before { border-color: #922B21 !important }
+                }
+            }
+            
+            button {
+                padding: 0.9375em 1.25em;
+
+                display: flex;
+                width: fit-content;
+                font-size: 0.8em;
+            }
+        }
+    }
+}
