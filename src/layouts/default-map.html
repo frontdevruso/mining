@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{> head }}
+
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=6d392d39-d052-4d77-a01d-f9ed0da99f83&lang=ru_RU" type="text/javascript"></script>
+    <script type="text/javascript">
+        let center = [55.908606, 37.778775];
+
+        function init() {
+            //eslint-disable-next-line
+            let map = new ymaps.Map('map', {
+                center: center,
+                zoom: 15,
+                controls: []
+            });
+
+            //eslint-disable-next-line
+            let placemark = new ymaps.Placemark(center, {
+                balloonContent: null,
+            }, {
+                iconLayout: "default#image",
+                iconImageHref: "./assets/images/map-marker.webp",
+                iconImageSize: [28, 37],
+            });
+
+            map.geoObjects.add(placemark);
+        }
+
+        window.ymaps?.ready(init);
+    </script>
+</head>
+<body class="">
+    <div class="page">
+
+        {{> header }}
+    
+        {{> body }}
+    
+        {{> footer }}
+
+    </div>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
