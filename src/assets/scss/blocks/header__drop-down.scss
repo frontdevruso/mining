@@ -27,7 +27,7 @@
             transition: .4s;
 
             span { font-size: 0.7em }
-            svg { margin-left: auto }
+            .link__arrow { margin-left: auto }
 
             ul {
                 position: absolute;
@@ -76,9 +76,7 @@
                         align-items: center;
                         justify-content: center;
 
-                        img {
-                            width: 100%;
-                        }
+                        img { width: 100% }
                     }
 
                     &:hover {
@@ -93,7 +91,7 @@
 
             &:hover {
                 background-color: $franceBlue;
-                .header__arrow--rightLeft { transform: rotate(90deg) }
+                .link__arrow--rightLeft { transform: rotate(90deg) }
 
                 ul { clip-path: initial }
             }

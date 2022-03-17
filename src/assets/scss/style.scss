@@ -16,6 +16,24 @@ body {
     min-width: 320px;
 }
 
+.m-open {
+    @media (max-width: 1024px) { 
+        overflow: hidden;
+
+        .header {
+            height: 100vh;
+            min-height: 100%;
+            width: 100%;
+            position: fixed;
+            z-index: 50;
+            top: 0;
+
+            background-color: $voidBlack;
+            .menu { display: block }
+        }
+    }
+}
+
 @import 'fonts';
 @import 'global';
 
@@ -33,3 +51,4 @@ body {
 @import "./blocks/partners.scss";
 @import "./blocks/contact-form.scss";
 @import "./blocks/header__drop-down.scss";
+@import "./blocks/mobile-menu.scss";

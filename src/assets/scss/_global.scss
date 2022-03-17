@@ -57,9 +57,7 @@ input:focus, textarea:focus, button:focus {
     margin-left: auto;
 
     box-sizing: border-box;
-    @media (max-width: 575px) { 
-        padding: 0 25px;
-    }
+    @media (max-width: 575px) { padding: 0 25px }
 }
 
 .g-title {

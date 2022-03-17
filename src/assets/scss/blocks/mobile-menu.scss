@@ -1,0 +1,109 @@
+.menu {
+    height: 100%;
+    font-size: 20px;
+
+    overflow-y: auto;
+    display: none;
+    background-color: $voidBlack;
+    
+    @media (max-width: 1024px) { display: none }
+    @media (max-width: 450px) { font-size: 18px }
+    @media (max-width: 375px) { font-size: 16px }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+
+        height: 100%;
+    }
+
+    ul {
+        li {
+            transition: .4s;
+            line-height: 120%;
+
+            main {
+                display: flex;
+                align-items: center;
+
+                a {
+                    padding: 25px 25px 25px 50px;
+                    width: 100%;
+
+                    display: flex;
+                    align-items: center;
+                    transition: .4s;
+                    
+                    &:hover { background-color: $franceBlue }
+                    @media (max-width: 575px) { padding: 25px }
+                    @media (max-width: 400px) { padding: 20px 25px }
+                    @media (max-width: 375px) { padding: 15px 15px 15px 25px }
+                }
+            }
+
+            &:hover {
+                main {
+                    a {svg { transform: rotate(180deg) }}
+                }
+
+                .menu__drop-down { clip-path: initial; height: 100%; position: initial; }
+            }
+        }
+
+        @media (max-width: 575px) { padding-left: 0 }
+    }
+
+    .menu__drop-down {
+        position: absolute;
+        clip-path: polygon(0 0, 0 0, 0 0, 0 0);
+        height: 0;
+
+        &-item {
+            font-size: 18px;
+            &-btn {
+                display: flex;
+                align-items: center;
+                padding: 25px 25px 25px 75px;
+
+                @media (max-width: 575px) { padding: 25px 25px 25px 50px }
+                @media (max-width: 400px) { padding: 20px 20px 20px 50px }
+                @media (max-width: 375px) { padding: 15px 15px 15px 35px }
+
+                & > * { transition: .4s }
+            }
+
+            ul {
+                position: absolute;
+                clip-path: polygon(0 0, 0 0, 0 0, 0 0);
+                height: 0;
+
+                display: flex;
+                flex-direction: column;
+
+                a {
+                    padding: 17px 17px 17px 100px;
+                    transform: .4s;
+                    &:hover { background-color: $franceBlue; color: white; }
+
+                    @media (max-width: 575px) { padding: 17px 17px 17px 75px; }
+                    @media (max-width: 375px) { padding: 15px 15px 15px 60px }
+                }
+            }
+
+            &:hover {
+                ul {
+                    position: initial;
+                    clip-path: initial; 
+                    height: 100%;
+                }
+                
+                .menu__drop-down-item-btn {
+                    span { color: $franceBlue }
+                    svg { stroke: $franceBlue; transform: rotate(180deg) }
+                }
+            }
+            @media (max-width: 450px) { font-size: 16px }
+            @media (max-width: 375px) { font-size: 14px }
+        }
+    }
+}
