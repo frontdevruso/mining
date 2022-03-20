@@ -9,19 +9,57 @@
     p {
         font-size: 1em;
         line-height: 130%;
+        margin-bottom: 2em;
         @media (max-width: 992px) { font-size: 0.9em }
         @media (max-width: 400px) { font-size: 0.8em }
     }
     
+    &__select {
+        display: flex;
+        flex-wrap: wrap;
+
+        @media (max-width: 768px) { display: none }
+
+        &-item {
+            &:not(:last-child) { margin-right: 10px }
+
+            background-color: transparent;
+            border: 1px solid $niche;
+            color: white;
+
+            font-size: 0.7em;
+            padding: 10px 20px;
+            transition: .4s;
+
+            margin-bottom: 10px;
+
+            &:hover {
+                border-color: $franceBlue;
+                color: $franceBlue;
+            }
+        }
+
+        .active {
+            background-color: $franceBlue;
+            border-color: $franceBlue;
+
+            color: white;
+
+            &:hover {
+                color: inherit;
+            }
+        }
+    }
+
     &__table {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-gap: 1em;
 
         width: 100%;
-        padding-top: 2em;
+        padding-top: 1.5em;
 
-        @media (max-width: 992px) { grid-template-columns: repeat(2, 1fr); padding-top: 1.5em }
+        @media (max-width: 992px) { grid-template-columns: repeat(2, 1fr); padding-top: 1em }
         @media (max-width: 575px) { grid-gap: .5em }
         @media (max-width: 400px) { grid-gap: .25em }
 

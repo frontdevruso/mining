@@ -48,4 +48,8 @@
         </g>
     </symbol>
 
+    <symbol viewBox="0 0 14 8" id="selectArrow">
+        <g fill="transparent"><path d="M1 0.5L7 6.5L13 0.5"/></g>
+    </symbol>
 </svg>
+

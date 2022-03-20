@@ -16,6 +16,13 @@ body {
     min-width: 320px;
 }
 
+.header-absolute {
+    .header {
+        position: absolute;
+        top: 0;
+    }
+}
+
 .m-open {
     @media (max-width: 1024px) { 
         overflow: hidden;
@@ -52,3 +59,7 @@ body {
 @import "./blocks/contact-form.scss";
 @import "./blocks/header__drop-down.scss";
 @import "./blocks/mobile-menu.scss";
+@import "./blocks/achievement.scss";
+@import "./blocks/charts.scss";
+@import "./blocks/gallery.scss";
+@import "./blocks/select.scss";
