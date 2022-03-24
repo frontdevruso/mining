@@ -1,0 +1,151 @@
+---
+layout: store-template
+title: Гормаш Глобал | Магазин
+---
+
+<section class="store">
+    <div class="store__container container__1200px">
+        <h1 class="g-title">Буровой инструмент TUMI</h1>
+        <div class="store__wrapper">
+            <div class="store__wrapper-filters">
+                <form class="store__wrapper-filters-search">
+                    <div class="store__wrapper-filters-search-input">
+                        <svg><use xlink:href="./assets/images/svg/sprite.svg#searchIcon"></use></svg>
+                        <input class="g-input" type="text" placeholder="Поиск по названию">
+                    </div>
+                </form>
+
+                <button class="filters-btn" id="filterBtn" type="button">
+                    <svg><use xlink:href="./assets/images/svg/sprite.svg#filterIcon"></use></svg>
+                </button>
+
+                <div id="filterPanel" class="store__wrapper-filters-panel">
+                    <div class="store__wrapper-filters-title store__wrapper-filters-title--close">
+                        <h3>Фильтры</h3>
+                        <button id="closeBtn">
+                            <svg><use xlink:href="./assets/images/svg/sprite.svg#closeBtn"></use></svg>
+                        </button>
+                    </div>
+                    <h3 class="store__wrapper-filters-title">Тип установок</h3>
+                    <div class="store__wrapper-filters-checkbox">
+                        <input id="filterElectrical" type="checkbox">
+                        <label for="filterElectrical"><span>Электрические</span></label>
+                    </div>
+                    <div class="store__wrapper-filters-checkbox">
+                        <input id="filterGasoline" type="checkbox">
+                        <label for="filterGasoline"><span>Бензиновые / дизельные</span></label>
+                    </div>
+                    <div class="store__wrapper-filters-checkbox">
+                        <input id="filterDinamyc" type="checkbox">
+                        <label for="filterDinamyc"><span>Передвижные / самоходные</span></label>
+                    </div>
+                    <div class="store__wrapper-filters-checkbox">
+                        <input id="filterStatic" type="checkbox">
+                        <label for="filterStatic"><span>Статические</span></label>
+                    </div>
+    
+                    <h3 class="store__wrapper-filters-title">Глубина бурения, м</h3>
+                    <div class="range-slider range-slider--depth">
+                        <div class="range-slider__inputs">
+                            <input type="number" class="input-depth--first" placeholder="от 60">
+                            <span>—</span>
+                            <input type="number" class="input-depth--second" placeholder="до 1600">
+                        </div>
+                        <div class="rs-Depth"></div>
+                        <div class="range-slider__limits">
+                            <span class="min">0</span>
+                            <span class="max">100</span>
+                        </div>
+                    </div>
+    
+                    <h3 class="store__wrapper-filters-title">Диаметр скважины, м</h3>
+                    <div class="range-slider range-slider--diameter">
+                        <div class="range-slider__inputs">
+                            <input type="number" class="input-diameter--first" placeholder="от 1,2">
+                            <span>—</span>
+                            <input type="number" class="input-diameter--second" placeholder="до 6,0">
+                        </div>
+                        <div class="rs-Diameter"></div>
+                        <div class="range-slider__limits">
+                            <span class="min">0</span>
+                            <span class="max">100</span>
+                        </div>
+                    </div>
+    
+                    <div class="store__wrapper-filters-title store__wrapper-filters-title--radio">
+                        <h3>Мощность</h3>
+    
+                        <form action="/">
+                            <div class="store__wrapper-filters-title-radio">
+                                <input type="radio" id="male" name="gender" checked>
+                                <label for="male">кВТ</label>
+                            </div>
+                              
+                            <div class="store__wrapper-filters-title-radio">
+                                <input type="radio" id="female" name="gender">
+                                <label for="female">л/сил</label>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="range-slider range-slider--power">
+                        <div class="range-slider__inputs">
+                            <input type="number" class="input-power" placeholder="от 150">
+                        </div>
+                        <div class="rs-power"></div>
+                        <div class="range-slider__limits">
+                            <span class="min">250</span>
+                            <span class="max">5250</span>
+                        </div>
+                    </div>
+                    <button type="button" class="store__wrapper-filters-reset">Сбросить</button>
+                </div>
+
+            </div>
+
+            <div class="store__wrapper-products">
+                <!-- ITEM -->
+                <a href="#" class="store__wrapper-products-item">
+                    <div class="store__wrapper-products-item-img">
+                        <img class="lozad" data-src="./assets/images/main-slider-1.png" data-srcset="./assets/images/main-slider-1@2x.png" alt="product">
+                    </div>
+                    <span>SBM 400 LP Machine</span>
+                </a>
+                <!-- ITEM -->
+                <a href="#" class="store__wrapper-products-item">
+                    <div class="store__wrapper-products-item-img">
+                        <img class="lozad" data-src="./assets/images/store-2.png" data-srcset="./assets/images/store-2@2x.png" alt="product">
+                    </div>
+                    <span>SBM 800 XP Machine</span>
+                </a>
+                <!-- ITEM -->
+                <a href="#" class="store__wrapper-products-item">
+                    <div class="store__wrapper-products-item-img">
+                        <img class="lozad" data-src="./assets/images/store-3.png" data-srcset="./assets/images/store-3@2x.png" alt="product">
+                    </div>
+                    <span>SBM 700 Machine</span>
+                </a>
+                <!-- ITEM -->
+                <a href="#" class="store__wrapper-products-item">
+                    <div class="store__wrapper-products-item-img">
+                        <img class="lozad" data-src="./assets/images/store-4.png" data-srcset="./assets/images/store-4@2x.png" alt="product">
+                    </div>
+                    <span>SBM 300 Machine</span>
+                </a>
+                <!-- ITEM -->
+                <a href="#" class="store__wrapper-products-item">
+                    <div class="store__wrapper-products-item-img">
+                        <img class="lozad" data-src="./assets/images/store-5.png" data-srcset="./assets/images/store-5@2x.png" alt="product">
+                    </div>
+                    <span>SBM 700 SR Machine</span>
+                </a>
+                <!-- ITEM -->
+                <a href="#" class="store__wrapper-products-item">
+                    <div class="store__wrapper-products-item-img">
+                        <img class="lozad" data-src="./assets/images/store-6.png" data-srcset="./assets/images/store-6@2x.png" alt="product">
+                    </div>
+                    <span>SBM 400 SR Machine</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</section> 

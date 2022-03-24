@@ -1,0 +1,118 @@
+.range-slider {
+    margin-bottom: 2em;
+
+    &__inputs {
+        display: flex;
+        align-items: center;
+
+        margin-bottom: 20px;
+
+        span {
+            font-size: 16px;
+            color: #647391;
+
+            margin: 0 16px;
+        }
+
+        input {
+            border: 1px solid white;
+            background-color: transparent;
+            color: white;
+
+            font-size: 16px;
+            padding: 10px 15px;
+            line-height: 1;
+
+            width: 100%;
+            transition: .4s;
+
+            &:focus {
+                border-color: #2B7EE0;
+                color: #2B7EE0;
+
+                &::placeholder { opacity: 0 }
+            }
+
+            &::-webkit-outer-spin-button,
+            &::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+                display: none;
+            }
+        }
+    }
+
+    &__limits {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        span {
+            color: $niche;
+            font-size: 14px;
+            font-style: italic;
+        }
+    }
+
+    // ON PLUGIN STYLES
+    .noUi-target {
+        border: none;
+        border-radius: 0;
+
+        margin: 14px 0;
+    }
+    
+    .noUi-base { background: #647391 }
+    .noUi-horizontal { height: 1px }
+    .noUi-connect { background-color: #2B7EE0 }
+
+    .noUi-horizontal .noUi-handle {
+        border: 1px solid #2B7EE0;
+        border-radius: 100%;
+        box-shadow: none;
+
+        transition: .2s;
+        overflow: hidden;
+        background-color: #2B7EE0;
+        &::before { display: none }
+
+        width: 12px;
+        height: 12px;
+
+        right: -10px;
+        top: 50%;
+        transform: translateY(-48%);
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        box-sizing: border-box;
+
+        &::after {
+            width: 0;
+            height: 0;
+            
+            background-color: #2B7EE0;
+            left: initial;right: initial;top: initial;bottom: initial;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 100%;
+        }
+
+        &:hover, &:focus {
+            width: 20px;
+            height: 20px;
+            
+            background-color: #131E33;
+
+            &::after {
+                width: 60%;
+                height: 60%;
+            }
+        }
+    }
+
+    .noUi-origin .noUi-handle-upper { right: 0 }
+}

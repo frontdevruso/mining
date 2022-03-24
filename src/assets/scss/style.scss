@@ -41,6 +41,12 @@ body {
     }
 }
 
+.f-open {
+    @media (max-width: 1024px) { 
+        overflow: hidden;
+    }
+}
+
 @import 'fonts';
 @import 'global';
 
@@ -63,3 +69,5 @@ body {
 @import "./blocks/charts.scss";
 @import "./blocks/gallery.scss";
 @import "./blocks/select.scss";
+@import "./blocks/store.scss";
+@import "./blocks/range-sliders.scss";

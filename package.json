@@ -38,6 +38,7 @@
         "gulp-postcss": "^9.0.1",
         "imask": "^6.2.2",
         "lozad": "^1.16.0",
+        "nouislider": "^15.5.1",
         "postcss": "^8.4.5",
         "swiper": "^7.4.1"
     }
