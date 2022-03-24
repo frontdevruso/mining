@@ -1,0 +1,19 @@
+.breadcumps {
+    display: flex;
+    margin-bottom: 0.75em;
+
+    a {
+        font-size: .7em;
+        font-weight: 400;
+
+        transition: .4s;
+        color: $niche;
+
+        &:hover {
+            color: $franceBlue;
+        }
+        
+    }
+
+    &:not(:last-child) { margin-right: 5px }
+}

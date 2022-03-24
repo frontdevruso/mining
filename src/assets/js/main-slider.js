@@ -16,9 +16,10 @@ if (document.querySelector('.main-slider')) {
         },
 
         navigation: {
-            nextEl: ".main-slider__navigation-arrow--prev",
-            prevEl: ".main-slider__navigation-arrow--next",
+            nextEl: ".main-slider__navigation-arrow--next",
+            prevEl: ".main-slider__navigation-arrow--prev",
         },
+        
         breakpoints: {
             575: {
                 direction: 'vertical',
