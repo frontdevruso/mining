@@ -11,7 +11,7 @@ if(selectItems) {
 
 // WITH Placeholder
 
-const selectBoxBlog = document.querySelector('.select-box--blog');
+const selectBoxBlog = document.querySelector('.select-box');
 if (selectBoxBlog) {
     const optionsContainer = document.getElementById("optionsContainerBlog");
     const selected = document.getElementById("selectBoxCurrentBlog");

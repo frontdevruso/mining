@@ -1,28 +1,33 @@
-if (document.querySelector('.main-slider')) {    
-    const gear = document.getElementById('gear');
-    const navSliderBar = document.getElementById('navMainSliderBar');
-    const arrowsBtns = document.querySelectorAll('.main-slider__navigation-arrow');
-
-    let mainSlider = new Swiper('.main-slider', {
-        direction: 'horizontal',
+if(document.querySelector('.services__slider')) {
+    const servicesNavBarSlider = document.querySelector('.services__slider-navBar');
+    const navSliderBar = document.getElementById('navServicesSliderBar');
+    const arrowsBtns = document.querySelectorAll('.services__slider-arrow');
+    
+    let servicesSlider = new Swiper(".services__slider", {
+        spaceBetween: 400,
         slidesPerView: 1,
-        spaceBetween: 120,
-        speed: 600,
+        allowTouchMove: true,
     
         pagination: {
-            el: ".main-slider__navigation-fraction",
+            el: ".services__slider-fraction--mb",
             clickable: true,
             type: "fraction",
         },
-
-        navigation: {
-            nextEl: ".main-slider__navigation-arrow--next",
-            prevEl: ".main-slider__navigation-arrow--prev",
-        },
         
+        navigation: {
+            nextEl: ".services__slider-arrow--next",
+            prevEl: ".services__slider-arrow--prev",
+        },
+
         breakpoints: {
-            575: {
-                direction: 'vertical',
+            768: {
+                allowTouchMove: false,
+
+                pagination: {
+                    el: ".services__slider-fraction",
+                    clickable: true,
+                    type: "fraction",
+                },
             },
         }
     });
@@ -37,13 +42,6 @@ if (document.querySelector('.main-slider')) {
     const reassignmentActiveLine = (elementIndex) => {
         navSliderBar.querySelector('.active').classList.remove('active');
         navSliderBar.querySelector(' :nth-child(' + elementIndex +')').classList.add('active');
-    }
-
-    const gearRotating = (deg) => {
-        const currentPosition = document.getElementById('gear').getAttribute('data-position');
-        const newPosition = Number(currentPosition) + deg;
-        gear.setAttribute('data-position', Number(currentPosition) + deg);
-        gear.style.transform = "rotate(" + newPosition + "deg)";
     }
 
     const onPrevAddLine = () => {
@@ -74,15 +72,13 @@ if (document.querySelector('.main-slider')) {
         }, 400);
     }
 
-    mainSlider.on('slidePrevTransitionStart', function() {
-        gearRotating(35);
+    servicesSlider.on('slidePrevTransitionStart', function() {
         onPrevAddLine();
         arrowsCoolDown();
         reassignmentActiveLine(4);
     });
     
-    mainSlider.on('slideNextTransitionStart', function() {
-        gearRotating(-35);
+    servicesSlider.on('slideNextTransitionStart', function() {
         onNextAddLine();
         arrowsCoolDown();
         reassignmentActiveLine(5);

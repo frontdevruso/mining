@@ -1,20 +1,1120 @@
 .services {
     display: flex;
 
-    h1 {
-        margin-bottom: 0.625em;
-    }
+    h1 { margin-bottom: 0.625em }
 
     &__container {
         display: flex;
         flex-direction: column;
+
+        margin-top: 3em;
+
+        @media (max-width: 500px) { margin-top: 25px }
     }
 
     &__paragraph {
         font-size: 1em;
         line-height: 150%;
+
+        max-width: 38.65em;
         margin-bottom: 5em;
 
         span { color: $franceBlue }
+
+        @media (max-width: 768px) {
+            font-size: 0.8em;
+        }
+
+        @media (max-width: 500px) {
+            
+            max-width: 26em;
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        position: relative;
+        overflow: hidden;
+        background-color: rgba(100, 115, 145, 0.1);
+        padding: 2.5em 2.5em 6em 2.5em;
+
+        margin-bottom: 5em;
+
+        &-title {
+            display: flex;
+            justify-content: space-between;
+
+            h1 {
+                font-weight: 500;
+                max-width: 12.71875em;
+                color: $niche;
+            }
+
+            @media (max-width: 1200px) {
+                h1 { font-size: 30px }
+            }
+            @media (max-width: 768px) {
+                .navigation-wrapper { display: none }
+                h1 { font-size: 24px }
+            }
+            @media (max-width: 575px) {
+                padding: 0 1em 0 1em;
+                h1 { font-size: 20px }
+            }
+        }
+
+        @media (max-width: 758px) {  padding: 2.5em 2.5em 7em 2.5em; }
+        @media (max-width: 575px) { padding: 1.5em 0 7em 0 }
+    }
+
+    &__slider {
+        width: 100%;
+        overflow: initial !important;
+        padding-top: 3em;
+
+        @media (max-width: 768px) { padding-top: 2em; padding-right: 0.7em;}
+        
+        &-fraction--mb {
+            position: absolute;
+            color: $niche;
+            width: 100%;
+
+            @media (max-width: 575px) {
+                margin: 30px auto;
+            }
+        }
+
+        &-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            position: relative;
+            
+            & > * { user-select: none }
+
+            img {
+                @media (max-width: 1200px) { max-width: 300px }
+                @media (max-width: 768px) { max-width: 230px }
+            }
+
+            .pointer {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+
+                picture { background-repeat: no-repeat }
+
+                span {
+                    font-size: 14px;
+                    font-style: italic;
+                    line-height: 120%;
+
+                    b { color: $franceBlue }
+
+                    @media (max-width: 1200px) { font-size: 10px }
+                }
+            }
+
+            &--first {
+                @media (max-width: 768px) {
+                    img {
+                        width: 195px;
+                        height: 150px;
+                    }
+                }
+
+                .pointer {
+                    &--first {
+                        transform: translate(-20%, -135%);
+                        
+                        picture {
+                            width: 200px;
+                            height: 77px;
+                            
+                            background-image: url('./../images/svg/arrow-1.svg');
+                            background-size: 287px 77px;
+                            background-position: 100% 100%;
+                        }
+        
+                        span { padding: 0 0 10px 15px }
+
+                        @media (max-width: 1200px) {
+                            picture {
+                                background-size: 200px 50px;
+                                width: 140px;
+                                height: 50px;
+                            }
+
+                            span { padding: 0 0 4px 5px }
+                        }
+
+                        @media (max-width: 768px) {
+                            transform: translate(0, -145%);
+
+                            picture {
+                                background-size: 115px 31px;
+                                background-image: url('./../images/svg/arrow-1-mb.svg');
+                                width: 115px;
+                                height: 31px;
+                            }
+
+                            span { padding: 0 0 4px 5px }
+                        }
+                    }
+
+                    &--second {
+                        transform: translate(-96%, -15%);
+
+                        picture {
+                            width: 287px;
+                            height: 77px;
+                            
+                            background-image: url('./../images/svg/arrow-1.svg');
+                            background-size: 287px 77px;
+                            background-position: 100% 100%;
+                        }
+        
+                        span { padding: 0 0 10px 15px }
+
+                        @media (max-width: 1200px) {
+                            transform: translate(-91%, -22%);
+
+                            picture {
+                                background-size: 100% 100%;
+                                width: 200px;
+                                height: 60px;
+                            }
+
+                            span { padding: 0 0 4px 5px }
+                        }
+
+                        @media (max-width: 768px) {
+                            transform: translate(-100%, -22%);
+
+                            picture {
+                                background-size: 95px 31px;
+                                background-image: url('./../images/svg/arrow-1-mb.svg');
+                                width: 95px;
+                                height: 31px;
+                            }
+
+                            span {
+                                max-width: 71px;
+                                padding: 0 0 4px 5px
+                            }
+                        }
+                    }
+
+                    &--third {
+                        transform: translate(30%, 200%);
+                        
+                        picture {
+                            width: 348px;
+                            height: 72px;
+                            
+                            background-image: url('./../images/svg/arrow-1.svg');
+                            background-size: 100% 72px;
+                            background-position: 100% 100%;
+
+                            transform: rotate(180deg);
+                        }
+        
+                        span {
+                            padding: 0 0 10px 0;
+                            position: absolute;
+                            bottom: 0;
+                            right: 15px;
+                        }
+
+                        @media (max-width: 1200px) {
+                            picture {
+                                background-size: 100% 100%;
+                                width: 260px;
+                                height: 60px;
+                            }
+
+                            span { padding: 0 0 4px 0 }
+                        }
+
+                        @media (max-width: 768px) {
+                            transform: translate(30%, 130%);
+
+                            picture {
+                                background-size: 100% 100%;
+                                width: 150px;
+                                height: 60px;
+                            }
+
+                            span {
+                                max-width: 90px;
+                                padding: 0 0 6px 0;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &--second {
+                .pointer {
+                    &--first {
+                        transform: translate(-160%, -55%);
+                        
+                        picture {
+                            width: 200px;
+                            height: 77px;
+                            
+                            background-image: url('./../images/svg/arrow-1.svg');
+                            background-size: 287px 77px;
+                            background-position: 100% 100%;
+                        }
+        
+                        span { padding: 0 0 10px 15px }
+                        
+                        @media (max-width: 1200px) {
+                            transform: translate(-115%, -55%);
+
+                            picture {
+                                background-size: 100% 100%;
+                                width: 170px;
+                                height: 45px;
+                            }
+
+                            span { padding: 0 0 4px 5px }
+                        }
+
+                        @media (max-width: 768px) {
+                            transform: translate(-1400%, -45%);
+                            
+                            picture {
+                                background-size: 6px 58px;
+                                background-image: url('./../images/svg/arrow-2-mb.svg');
+                                width: 6px;
+                                height: 58px;
+                            }
+
+                            span {
+                                padding: 5px 0 0 0;
+                                margin: 0;
+                                position: absolute;
+                                right: 50%;
+                                bottom: 0;
+                                transform: translateX(50%) translateY(-380%);
+
+                                text-align: center;
+                                white-space: nowrap;
+                            }
+                        }
+                    }
+
+                    &--second {
+                        transform: translate(120%, 0%);
+                        
+                        picture {
+                            width: 300px;
+                            height: 79px;
+                            
+                            background-image: url('./../images/svg/arrow-1.svg');
+                            background-size: 100% 79px;
+                            background-position: 100% 100%;
+
+                            transform: scale(-1, 1);
+                        }
+        
+                        span {
+                            padding: 0 0 10px 15px;
+                            margin: 0 20px 0 auto;
+                        }
+
+                        @media (max-width: 1200px) {
+                            transform: translate(110%, -10%);
+
+                            picture {
+                                background-size: 100% 100%;
+                                width: 170px;
+                                height: 55px;
+                            }
+
+                            span { padding: 0 0 4px 5px; margin: 0 5px 0 auto; }
+                        }
+
+                        @media (max-width: 768px) {
+                            transform: translate(-20%, 150%);
+                            
+                            picture {
+                                background-size: 100% 100%;
+                                background-image: url('./../images/svg/arrow-1-mb.svg');
+                                width: 130px;
+                                height: 40px;
+
+                                transform: scale(1, -1);
+                            }
+
+                            span {
+                                position: absolute;
+                                bottom: 0;left: 0;
+                                padding: 0 0 6px 0;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &--third {
+                .pointer {
+                    &--first {
+                        transform: translate(-205%, -100%);
+                        
+                        picture {
+                            width: 160px;
+                            height: 77px;
+                            
+                            background-image: url('./../images/svg/arrow-1.svg');
+                            background-size: 287px 77px;
+                            background-position: 100% 100%;
+                        }
+        
+                        span { padding: 0 0 10px 15px }
+
+                        @media (max-width: 1200px) {
+                            transform: translate(-135%, -110%);
+
+                            picture {
+                                background-size: 100% 100%;
+                                width: 120px;
+                                height: 45px;
+                            }
+
+                            span { padding: 0 0 4px 5px }
+                        }
+                        
+                        @media (max-width: 768px) {
+                            transform: translate(-1105%, -115%);
+                            
+                            picture {
+                                background-size: 6px 45px;
+                                background-image: url('./../images/svg/arrow-2-mb.svg');
+                                width: 6px;
+                                height: 45px;
+                            }
+
+                            span {
+                                padding: 5px 0 0 0;
+                                position: absolute;
+                                right: 50%;
+                                bottom: 0;
+                                transform: translateX(50%) translateY(-300%);
+
+                                text-align: center;
+                                white-space: nowrap;
+                            }
+                        }
+                    }
+
+                    &--second {
+                        transform: translate(130%, -15%);
+                        
+                        picture {
+                            width: 263px;
+                            height: 79px;
+                            
+                            background-image: url('./../images/svg/arrow-1.svg');
+                            background-size: 100% 79px;
+                            background-position: 100% 100%;
+
+                            transform: scale(-1, 1);
+                        }
+        
+                        span {
+                            padding: 0 0 10px 0;
+                            margin: 0 10px 0 auto;
+                        }
+
+                        @media (max-width: 1200px) {
+
+                            picture {
+                                background-size: 100% 100%;
+                                width: 130px;
+                                height: 45px;
+                            }
+
+                            span { padding: 0 0 4px 5px; margin: 0 5px 0 auto }
+                        }
+
+                        @media (max-width: 768px) {
+                            transform: translate(1400%, -30%);
+                            
+                            picture {
+                                background-size: 6px 70px;
+                                background-image: url('./../images/svg/arrow-2-mb.svg');
+                                width: 6px;
+                                height: 70px;
+                            }
+
+                            span {
+                                padding: 5px 0 0 0;
+                                position: absolute;
+                                right: 50%;
+                                bottom: 0;
+                                transform: translateX(50%) translateY(-450%);
+
+                                text-align: center;
+                                white-space: nowrap;
+                            }
+                        }
+                    }
+
+                    &--third {
+                        transform: translate(-140%, 65%);
+                        
+                        picture {
+                            width: 240px;
+                            height: 77px;
+                            
+                            background-image: url('./../images/svg/arrow-1.svg');
+                            background-size: 287px 77px;
+                            background-position: 100% 100%;
+
+                            transform: scale(1, -1);
+                        }
+        
+                        span {
+                            padding: 0 0 10px 15px;
+                            position: absolute;
+                            bottom: 2px;
+                        }
+
+                        @media (max-width: 1200px) {
+
+                            picture {
+                                background-size: 100% 100%;
+                                width: 120px;
+                                height: 40px;
+                            }
+
+                            span { padding: 0 0 4px 5px }
+                        }
+
+                        @media (max-width: 768px) {
+                            transform: translate(-1440%, 65%);
+                            
+                            picture {
+                                background-size: 6px 60px;
+                                background-image: url('./../images/svg/arrow-2-mb.svg');
+                                width: 6px;
+                                height: 60px;
+
+                                transform: rotate(180deg);
+                            }
+
+                            span {
+                                padding: 5px 0 0 0;
+                                position: absolute;
+                                right: 50%;
+                                bottom: 0;
+                                transform: translateX(50%) translateY(120%);
+
+                                text-align: center;
+                                white-space: nowrap;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &--fourth {
+                .pointer {
+                    &--first {
+                        transform: translate(-95%, -380%);
+                        
+                        picture {
+                            width: 250px;
+                            height: 5px;
+                            
+                            background-image: url('./../images/svg/arrow-2.svg');
+                            background-size: 250px 5px;
+                            background-position: 100% 100%;
+                        }
+        
+                        span { padding: 0 0 10px 15px }
+
+                        @media (max-width: 1200px) {
+                            transform: translate(-90%, -340%);
+
+                            picture {
+                                background-size: 100% 100%;
+                                width: 150px;
+                                height: 3px;
+                            }
+
+                            span { padding: 0 0 4px 5px }
+                        }
+
+                        @media (max-width: 768px) {
+                            transform: translate(-70%, -120%);
+
+                            picture {
+                                background-size: 100px 31px;
+                                background-image: url('./../images/svg/arrow-1-mb.svg');
+                                width: 100px;
+                                height: 31px;
+                            }
+
+                            span {
+                                max-width: 70px;
+                                padding: 0 0 4px 5px;
+                            }
+                        }
+                    }
+                    
+                    &--second {
+                        transform: translate(130%, -15%);
+                        
+                        picture {
+                            width: 263px;
+                            height: 79px;
+                            
+                            background-image: url('./../images/svg/arrow-1.svg');
+                            background-size: 100% 79px;
+                            background-position: 100% 100%;
+
+                            transform: scale(-1, 1);
+                        }
+        
+                        span {
+                            padding: 0 0 10px 0;
+                            margin: 0 10px 0 auto;
+                        }
+
+                        @media (max-width: 1200px) {
+
+                            picture {
+                                background-size: 100% 100%;
+                                width: 150px;
+                                height: 45px;
+                            }
+
+                            span { padding: 0 0 4px 5px; margin: 0 5px 0 auto }
+                        }
+                        
+                        @media (max-width: 768px) {
+                            transform: translate(-25%, 225%);
+
+                            picture {
+                                background-size: 100% 100%;
+                                background-image: url('./../images/svg/arrow-1-mb.svg');
+                                width: 140px;
+                                height: 40px;
+
+                                transform: scale(1, -1);
+                            }
+
+                            span {
+                                position: absolute;
+                                bottom: 0;left: 0;
+                                padding: 0 0 6px 4px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &--fiveth {
+                .pointer {
+                    &--first {
+                        transform: translate(-92%, -460%);
+                        
+                        picture {
+                            width: 250px;
+                            height: 5px;
+                            
+                            background-image: url('./../images/svg/arrow-2.svg');
+                            background-size: 250px 5px;
+                            background-position: 100% 100%;
+                        }
+        
+                        span { padding: 0 0 10px 15px }
+
+                        @media (max-width: 1200px) {
+                            transform: translate(-84%, -370%);
+
+                            picture {
+                                background-size: 100% 100%;
+                                width: 150px;
+                                height: 3px;
+                            }
+
+                            span { padding: 0 0 4px 5px }
+                        }
+
+                        @media (max-width: 768px) {
+                            transform: translate(-84%, -160%);
+
+                            picture {
+                                background-size: 100px 31px;
+                                background-image: url('./../images/svg/arrow-1-mb.svg');
+                                width: 100px;
+                                height: 31px;
+                            }
+
+                            span {
+                                max-width: 70px;
+                                padding: 0 0 4px 5px;
+                            }
+                        }
+                    }
+
+                    &--second {
+                        transform: translate(135%, -55%);
+                        
+                        picture {
+                            width: 263px;
+                            height: 79px;
+                            
+                            background-image: url('./../images/svg/arrow-1.svg');
+                            background-size: 100% 79px;
+                            background-position: 100% 100%;
+
+                            transform: scale(-1, 1);
+                        }
+        
+                        span {
+                            padding: 0 0 10px 0;
+                            margin: 0 10px 0 auto;
+                        }
+
+                        @media (max-width: 1200px) {
+                            transform: translate(105%, -45%);
+
+                            picture {
+                                background-size: 100% 100%;
+                                width: 170px;
+                                height: 45px;
+                            }
+
+                            span { padding: 0 0 4px 5px; margin: 0 5px 0 auto }
+                        }
+
+                        @media (max-width: 768px) {
+                            transform: translate(1555%, -45%);
+                            
+                            picture {
+                                background-size: 6px 65px;
+                                background-image: url('./../images/svg/arrow-2-mb.svg');
+                                width: 6px;
+                                height: 65px;
+                            }
+
+                            span {
+                                padding: 5px 0 0 0;
+                                position: absolute;
+                                right: 50%;
+                                bottom: 0;
+                                transform: translateX(50%) translateY(-250%);
+
+                                text-align: center;
+                                white-space: nowrap;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &--sixth {
+                .pointer {
+                    &--first {
+                        transform: translate(-122%, 60%);
+                        
+                        picture {
+                            width: 293px;
+                            height: 79px;
+                            
+                            background-image: url('./../images/svg/arrow-1.svg');
+                            background-size: 100% 79px;
+                            background-position: 100% 100%;
+
+                            transform: scale(1, -1);
+                        }
+        
+                        span {
+                            padding: 0 0 10px 15px;
+                            position: absolute;
+                            bottom: 0;
+                        }
+
+                        @media (max-width: 1200px) {
+                            picture {
+                                background-size: 100% 100%;
+                                width: 160px;
+                                height: 45px;
+                            }
+
+                            span { padding: 0 0 4px 5px }
+                        }
+
+                        @media (max-width: 768px) {
+                            transform: translate(-1350%, 80%);
+                            
+                            picture {
+                                background-size: 6px 60px;
+                                background-image: url('./../images/svg/arrow-2-mb.svg');
+                                width: 6px;
+                                height: 60px;
+
+                                transform: rotate(180deg);
+                            }
+
+                            span {
+                                padding: 5px 0 0 0;
+                                position: absolute;
+                                right: 50%;
+                                bottom: 0;
+                                transform: translateX(50%) translateY(120%);
+
+                                text-align: center;
+                                white-space: nowrap;
+                            }
+                        }
+                    }
+
+                    &--second {
+                        transform: translate(145%, -55%);
+                        
+                        picture {
+                            width: 263px;
+                            height: 79px;
+                            
+                            background-image: url('./../images/svg/arrow-1.svg');
+                            background-size: 100% 79px;
+                            background-position: 100% 100%;
+
+                            transform: scale(-1, 1);
+                        }
+        
+                        span {
+                            padding: 0 0 10px 0;
+                            margin: 0 10px 0 auto;
+                        }
+
+                        @media (max-width: 1200px) {
+                            transform: translate(130%, -55%);
+                            picture {
+                                background-size: 100% 100%;
+                                width: 150px;
+                                height: 45px;
+                            }
+
+                            span { padding: 0 0 4px 0 }
+                        }
+
+                        @media (max-width: 768px) {
+                            transform: translate(1555%, -45%);
+                            
+                            picture {
+                                background-size: 6px 65px;
+                                background-image: url('./../images/svg/arrow-2-mb.svg');
+                                width: 6px;
+                                height: 65px;
+                            }
+
+                            span {
+                                padding: 5px 0 0 0;
+                                position: absolute;
+                                margin: 0;
+                                right: 50%;
+                                bottom: 0;
+                                transform: translateX(50%) translateY(-430%);
+
+                                text-align: center;
+                                white-space: nowrap;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &--seventh {
+                img { padding-right: 207px }
+                @media (max-width: 1200px) { img { padding-right: 138px } }
+                @media (max-width: 768px) {
+                    img { padding-right: 0 }
+                }
+
+                .pointer {
+                    &--first {
+                        transform: translate(-112%, -130%);
+                        
+                        picture {
+                            width: 240px;
+                            height: 77px;
+                            
+                            background-image: url('./../images/svg/arrow-1.svg');
+                            background-size: 287px 77px;
+                            background-position: 100% 100%;
+                        }
+        
+                        span { padding: 0 0 10px 15px }
+
+                        @media (max-width: 1200px) {
+                            picture {
+                                background-size: 100% 100%;
+                                width: 155px;
+                                height: 40px;
+                            }
+
+                            span { padding: 0 0 4px 5px }
+                        }
+
+                        @media (max-width: 768px) {
+                            transform: translate(-80%, -130%);
+
+                            picture {
+                                background-size: 100px 31px;
+                                background-image: url('./../images/svg/arrow-1-mb.svg');
+                                width: 100px;
+                                height: 31px;
+                            }
+
+                            span { padding: 0 0 4px 5px }
+                        }
+                    }
+
+                    &--second {
+                        transform: translate(-68%, 650%);
+                        
+                        picture {
+                            width: 200px;
+                            height: 8px;
+                            
+                            background-image: url('./../images/svg/arrow-2.svg');
+                            background-size: 100% 8px;
+                            background-position: 100% 100%;
+
+                            transform: rotate(270deg);
+                        }
+        
+                        span {
+                            padding: 15px 0 0 0;
+                            position: absolute;
+                            right: 50%;
+                            transform: translateX(50%) translateY(300%);
+
+                            white-space: nowrap;
+                        }
+
+                        @media (max-width: 1200px) {
+                            transform: translate(-55%, 1340%);
+
+                            picture {
+                                width: 150px;
+                                height: 4px;
+                                background-size: 100% 4px;
+                            }
+
+                            span {
+                                padding: 5px 0 0 0;
+                                transform: translateX(50%) translateY(450%);
+                            }
+                        }
+
+                        @media (max-width: 768px) {
+                            transform: translate(-145%, 35%);
+                            
+                            picture {
+                                background-size: 6px 60px;
+                                background-image: url('./../images/svg/arrow-2-mb.svg');
+                                width: 6px;
+                                height: 60px;
+
+                                transform: rotate(180deg);
+                            }
+
+                            span {
+                                padding: 5px 0 0 0;
+                                position: absolute;
+                                right: 50%;
+                                bottom: 0;
+                                transform: translateX(50%) translateY(120%);
+
+                                text-align: center;
+                                white-space: nowrap;
+                            }
+                        }
+                    }
+
+                    &--third {
+                        transform: translate(110%, -10%);
+                        
+                        picture {
+                            width: 270px;
+                            height: 79px;
+                            
+                            background-image: url('./../images/svg/arrow-1.svg');
+                            background-size: 100% 79px;
+                            background-position: 100% 100%;
+
+                            transform: scale(-1, 1);
+                        }
+        
+                        span {
+                            padding: 0 0 10px 15px;
+                            margin: 0 20px 0 auto;
+                        }
+
+                        @media (max-width: 1200px) {
+                            transform: translate(80%, 20%);
+
+                            picture {
+                                background-size: 100% 100%;
+                                width: 165px;
+                                height: 40px;
+                            }
+
+                            span { padding: 0 0 4px 5px; margin: 0 10px 0 auto; }
+                        }
+
+                        @media (max-width: 768px) {
+                            transform: translate(5%, 240%);
+
+                            picture {
+                                background-size: 100% 100%;
+                                background-image: url('./../images/svg/arrow-1-mb.svg');
+                                width: 171px;
+                                height: 40px;
+
+                                transform: scale(1, -1);
+                            }
+
+                            span {
+                                position: absolute;
+                                bottom: 0;left: 0;
+                                padding: 0 0 6px 4px;
+                            }
+                        }
+                    }
+
+                    &--fourth {
+                        transform: translate(20%, -123%);
+                        
+                        picture {
+                            width: 360px;
+                            height: 90px;
+                            
+                            background-image: url('./../images/svg/arrow-1.svg');
+                            background-size: 100% 90px;
+                            background-position: 100% 100%;
+
+                            transform: scale(-1, 1);
+                        }
+        
+                        span {
+                            padding: 0 0 10px 15px;
+                            margin: 0 20px 0 auto;
+                        }
+
+                        @media (max-width: 1200px) {
+                            transform: translate(20%, -103%);
+
+                            picture {
+                                background-size: 100% 100%;
+                                width: 240px;
+                                height: 60px;
+                            }
+
+                            span { padding: 0 0 4px 5px; margin: 0 10px 0 auto; }
+                        }
+
+                        @media (max-width: 768px) {
+                            transform: translate(50%, -120%);
+                            
+                            picture {
+                                background-size: 100% 30px;
+                                background-image: url('./../images/svg/arrow-1-mb.svg');
+                                width: 130px;
+                                height: 30px;
+                            }
+
+                            span {
+                                max-width: 90px;
+                                margin: 0 0 0 auto;
+                                padding-right: 5px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &--eighth {
+                .pointer {
+                    &--first {
+                        transform: translate(90%, 400%);
+                        
+                        picture {
+                            width: 200px;
+                            height: 8px;
+                            
+                            background-image: url('./../images/svg/arrow-2.svg');
+                            background-size: 100% 8px;
+                            background-position: 100% 100%;
+
+                            transform: rotate(270deg);
+                        }
+        
+                        span {
+                            padding: 15px 0 0 0;
+                            position: absolute;
+                            right: 50%;
+                            bottom: 0;
+                            transform: translateX(50%) translateY(300%);
+
+                            text-align: center;
+                            white-space: nowrap;
+                        }
+
+                        @media (max-width: 1200px) {
+                            transform: translate(50%, 800%);
+
+                            picture {
+                                width: 150px;
+                                height: 4px;
+                                background-size: 100% 4px;
+                            }
+
+                            span {
+                                padding: 5px 0 0 0;
+                                transform: translateX(50%) translateY(350%);
+                            }
+                        }
+
+                        @media (max-width: 768px) {
+                            transform: translate(1300%, 10%);
+                            
+                            picture {
+                                background-size: 6px 70px;
+                                background-image: url('./../images/svg/arrow-2-mb.svg');
+                                width: 6px;
+                                height: 70px;
+
+                                transform: rotate(180deg);
+                            }
+
+                            span {
+                                padding: 5px 0 0 0;
+                                position: absolute;
+                                right: 50%;
+                                bottom: 0;
+                                transform: translateX(50%) translateY(100%);
+
+                                text-align: center;
+                                white-space: nowrap;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }

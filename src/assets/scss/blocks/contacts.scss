@@ -1,0 +1,117 @@
+.contacts {
+    margin-top: 3em;
+    @media (max-width: 500px) { margin-top: 25px }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+
+        @media (max-width: 575px) { padding: 0 }
+    }
+
+    &__title {
+        @media (max-width: 500px) { padding: 0 25px }
+    }
+    
+    &__table {
+        position: relative;
+        background-color: #131E33;
+
+        padding: 2.5em;
+        margin: 1.5em 0 7.5em;
+        height: 13.1em;
+
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+
+        background-image: url('./../images/contacts-bg.png');
+        background-repeat: no-repeat;
+        background-size: auto auto;
+        background-position: top right;
+
+        @media (max-width: 992px) {
+            margin: 1.5em 0 14em;
+        }
+
+        @media (max-width: 575px) {
+            padding: 1.5em 1.25em;
+            height: 16.25em;
+
+            justify-content: center;
+        }
+
+        h1 {
+            margin-bottom: 0.625em;
+            color: $niche;
+
+            @media (max-width: 575px) { color: white }
+            @media (max-width: 500px) { margin-bottom: 1em; }
+        }
+
+        p {
+            line-height: 150%;
+            font-size: 1em;
+
+            max-width: 23.6em;
+
+            @media (max-width: 500px) { font-size: 16px }
+        }
+
+        &-sources {
+            display: flex;
+            position: absolute;
+
+            bottom: 0;
+            transform: translateY(50%);
+            width: calc(100% - 100px);
+
+            @media (max-width: 992px) {
+                flex-direction: column;
+            }
+
+            @media (max-width: 575px) {
+                width: calc(100% - 50px);
+            }
+            
+            &-item {
+                display: flex;
+                flex-direction: column;
+
+                width: 100%;
+                padding: 1em 1.5em;
+                background-color: $franceBlue;
+
+                span {
+                    font-size: 0.7em;
+                    margin-bottom: 10px;
+                }
+
+                a {
+                    font-size: 1.6em;
+                    transition: .4s;
+
+                    &:hover { color: #cecece }
+
+                    @media (max-width: 500px) { font-size: 1.2em }
+                }
+
+                &:not(:last-child) { margin-right: 1em }
+
+                @media (max-width: 992px) {
+                    width: auto;
+                    transform: translateY(55%);
+                    &:not(:last-child) { margin-right: 0; margin-bottom: 1em; }
+
+                    align-items: center;
+                }
+
+                @media (max-width: 768px) {
+                    align-items: start;
+                }
+
+                @media (max-width: 575px) { padding: 1em }
+            }
+        }
+    }
+}

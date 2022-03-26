@@ -1,0 +1,30 @@
+.search-bar {
+    border: .05em solid $niche;
+    padding: .5em 1em;
+
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+
+    &__input {
+        display: flex;
+        align-items: center;
+
+        svg {
+            width: 0.9em;
+            height: 0.9em;
+
+            margin-right: .5em;
+        }
+
+        input {
+            padding: 0;
+            background-color: transparent;
+            border: none;
+
+            font-size: 16px;
+            line-height: 140%;
+            width: 100%;
+        }
+    }
+}

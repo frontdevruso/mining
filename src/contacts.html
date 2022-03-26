@@ -1,0 +1,63 @@
+---
+layout: default-map
+title: Гормаш Глобал | Контакты
+---
+
+<section class="contacts">
+    <div class="contacts__container container__1200px">
+        <h1 class="g-title contacts__title">Контакты</h1>
+        <div class="contacts__table">
+            <h1 class="g-title">ООО «Гормаш Глобал»</h1>
+            <p>
+                141009, Московская область, г. Мытищи
+                ул. Новослободская, владение 1, стр. 1, офис 141
+            </p>
+
+            <div class="contacts__table-sources">
+                <!-- ITEM -->
+                <div class="contacts__table-sources-item">
+                    <span>Телефон</span>
+                    <a href="tel:+74956645313">+7 495 664-53-13</a>
+                </div>
+                <!-- ITEM -->
+                <div class="contacts__table-sources-item">
+                    <span>Электронная почта</span>
+                    <a href="mailto:info@rosgorprom.ru">info@rosgorprom.ru</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="contact-form">
+    <div class="contact-form__container container__1200px">
+      <h1 class="g-title">Напишите нам <br> и мы ответим на все вопросы</h1>
+      <div class="contact-form__wrapper">
+  
+        <form id="contactForm" class="contact-form__wrapper-form" action="/">
+          <input class="g-input" type="text" data-validate-field="name" placeholder="Имя" required>
+          <input class="g-input" type="tel" data-validate-field="tel" placeholder="+ 1234567890" required>
+          <input class="g-input" type="email" data-validate-field="mail" placeholder="Электронная почта" required>
+          <textarea class="g-input" name="message" data-validate-field="message" placeholder="Сообщение"></textarea>
+          <div class="contact-form__wrapper-form-policy">
+            <input id="policyCheckbox" type="checkbox" data-validate-field="checkbox">
+            <label for="policyCheckbox" id="policyCheckboxWrapper">
+              <p>
+                Я ознакомлен с <a href="#">Политикой конфиденциальности</a>
+                и согласен на обработку персональных данных
+              </p>
+            </label>
+          </div>
+          <button id="contactFormBtn" class="g-blue-btn" type="submit">Отправить</button>
+        </form>
+        
+        <section class="contact-form__wrapper-map" id="map">
+          <div class="contact-form__wrapper-map-address">
+            Наш офис:
+            <span>г. Мытищи, ул. Новослободская, влд 1, стр. 1, офис 141</span>
+          </div>
+        </section>
+        
+      </div>
+    </div>
+</section>

@@ -9,6 +9,21 @@
     max-width: 13.75em;
     cursor: pointer;
 
+    &--policy {
+        display: none;
+        margin: 20px 0 50px;
+
+        .select-box-current {
+            color: $franceBlue;
+            border-color: $franceBlue;
+        }
+        
+        .select-box-arrow {stroke: $franceBlue }
+        .option label { line-height: 120% }
+        
+        @media (max-width: 992px) { display: flex }
+    }
+
     @media (max-width: 768px) { display: flex }
 
     & .options-container {
