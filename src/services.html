@@ -190,34 +190,50 @@ title: Гормаш Глобал | Услуги
 </section>
 
 <section class="contact-form">
-    <div class="contact-form__container container__1200px">
-      <h1 class="g-title">Напишите нам <br> и мы ответим на все вопросы</h1>
-      <div class="contact-form__wrapper">
-  
-        <form id="contactForm" class="contact-form__wrapper-form" action="/">
-          <input class="g-input" type="text" data-validate-field="name" placeholder="Имя" required>
-          <input class="g-input" type="tel" data-validate-field="tel" placeholder="+ 1234567890" required>
-          <input class="g-input" type="email" data-validate-field="mail" placeholder="Электронная почта" required>
-          <textarea class="g-input" name="message" data-validate-field="message" placeholder="Сообщение"></textarea>
-          <div class="contact-form__wrapper-form-policy">
-            <input id="policyCheckbox" type="checkbox" data-validate-field="checkbox">
-            <label for="policyCheckbox" id="policyCheckboxWrapper">
-              <p>
-                Я ознакомлен с <a href="#">Политикой конфиденциальности</a>
-                и согласен на обработку персональных данных
-              </p>
-            </label>
+  <div class="contact-form__container container__1200px">
+    <h1 class="g-title">Напишите нам <br> и мы ответим на все вопросы</h1>
+    <div class="contact-form__wrapper">
+
+      <div class="card360deg">
+        <div class="front__side">
+          <form id="contactForm" class="contact-form__wrapper-form" action="/">
+            <input class="g-input" type="text" data-validate-field="name" placeholder="Имя" required>
+            <input class="g-input" type="tel" data-validate-field="tel" placeholder="+ 1234567890" required>
+            <input class="g-input" type="email" data-validate-field="mail" placeholder="Электронная почта" required>
+            <textarea class="g-input" name="message" data-validate-field="message" placeholder="Сообщение"></textarea>
+            <div class="contact-form__wrapper-form-policy">
+              <input id="policyCheckbox" type="checkbox" data-validate-field="checkbox">
+              <label for="policyCheckbox" id="policyCheckboxWrapper">
+                <p>
+                  Я ознакомлен с <a href="#">Политикой конфиденциальности</a>
+                  и согласен на обработку персональных данных
+                </p>
+              </label>
+            </div>
+            <button id="contactFormBtn" class="g-blue-btn" type="submit">Отправить</button>
+          </form>
+        </div>
+
+        <div class="back__side">
+          <div class="thx__message">
+            <svg><use xlink:href="./assets/images/svg/sprite.svg#thxMessageIcon"></use></svg>
+            <h2>Спасибо<span></span></h2>
+            <p>
+              Ваша заявка принята <br>
+              и мы скоро свяжемся с вами
+            </p>
           </div>
-          <button id="contactFormBtn" class="g-blue-btn" type="submit">Отправить</button>
-        </form>
-        
-        <section class="contact-form__wrapper-map" id="map">
-          <div class="contact-form__wrapper-map-address">
-            Наш офис:
-            <span>г. Мытищи, ул. Новослободская, влд 1, стр. 1, офис 141</span>
-          </div>
-        </section>
-        
+        </div>
       </div>
+
+      
+      <section class="contact-form__wrapper-map" id="map">
+        <div class="contact-form__wrapper-map-address">
+          Наш офис:
+          <span>г. Мытищи, ул. Новослободская, влд 1, стр. 1, офис 141</span>
+        </div>
+      </section>
+      
     </div>
+  </div>
 </section>
