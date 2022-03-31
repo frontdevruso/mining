@@ -2,9 +2,19 @@
 <html lang="en">
 <head>
     {{> head }}
+</head>
+<body class="">
+    <div class="page">
 
-    <!-- <script src="https://api-maps.yandex.ru/2.1/?apikey=6d392d39-d052-4d77-a01d-f9ed0da99f83&lang=ru_RU" type="text/javascript"></script>
+        {{> header }}
+    
+        {{> body }}
+    
+        {{> footer }}
+
+    </div>
     <script>
+        const mapOnPage = document.getElementById('map');
         let center = [55.908606, 37.778775];
 
         function init() {
@@ -27,19 +37,20 @@
             map.geoObjects.add(placemark);
         }
 
-        window.ymaps?.ready(init);
-    </script> -->
-</head>
-<body class="">
-    <div class="page">
+        function addScript( src ) {
+            var jsonScript = document.createElement( 'script' );
+            jsonScript.setAttribute( 'src', src );
+            document.querySelector('head').appendChild(jsonScript);
+        }
 
-        {{> header }}
-    
-        {{> body }}
-    
-        {{> footer }}
+        mapOnPage.addEventListener('click', function() {
+            addScript('https://api-maps.yandex.ru/2.1/?apikey=6d392d39-d052-4d77-a01d-f9ed0da99f83&lang=ru_RU');
+            setTimeout(function() {
+                window.ymaps?.ready(init);
+            }, 400);
+        }, {once : true});
+    </script>
 
-    </div>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="assets/js/app.js"></script>
 </body>
