@@ -93,13 +93,14 @@
                 align-items: center;
 
                 transition: .4s;
+
+                a {
+                    font-size: 0.8em;
+                    transition: .4s;
+                    @media (max-width: 1200px) { font-size: 0.7em }
+                }  
             }
             
-            a {
-                font-size: 0.8em;
-                transition: .4s;
-                @media (max-width: 1200px) { font-size: 0.7em }
-            }
 
             &:hover {
                 main {
