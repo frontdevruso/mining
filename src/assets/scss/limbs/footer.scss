@@ -37,6 +37,8 @@
     &__policy {
         color: $franceBlue;
         font-size: 0.9em;
+        
+        transition: .4s;
         text-decoration: underline;
 
         @media (max-width: 768px) { display: none }
@@ -48,6 +50,8 @@
             @media (max-width: 768px) { display: block }
             @media (max-width: 375px) { font-size: 0.8em }
         }
+
+        &:hover { color: darken($franceBlue, 15%) }
     }
 
     &__links {
@@ -112,6 +116,8 @@
 
             a {
                 color: $franceBlue;
+
+                transition: .4s;
                 text-decoration: underline;
 
                 font-size: 0.9em;
@@ -121,6 +127,8 @@
                     &:not(:last-child) { margin-right: 1em }
                 }
                 @media (max-width: 375px) { font-size: 0.8em }
+
+                &:hover { color: darken($franceBlue, 15%) }
             }
 
             @media (max-width: 768px) { margin: initial }

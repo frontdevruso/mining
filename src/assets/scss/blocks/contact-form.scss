@@ -62,10 +62,18 @@
                         a {
                             color: $franceBlue;
                             text-decoration: underline;
+                            transition: .4s;
+
+                            &:hover { color: darken($franceBlue, 15%) }
                         }
 
                         @media (max-width: 992px) { max-width: 450px }
                         @media (max-width: 375px) { font-size: 12px }
+                    }
+
+
+                    &:hover {
+                        &::before { border-color: $franceBlue !important }
                     }
                 }
                 
@@ -80,6 +88,7 @@
 
                     margin-right: 0.75em;
                     box-sizing: border-box;
+                    transition: .4s;
                     cursor: pointer;
 
                     background-size: .6em .5em;

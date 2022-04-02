@@ -38,6 +38,11 @@
         &:first-child { border-right: none }
         &:last-child { border-left: none }
 
+        &:hover {
+            background-color: rgba(43, 126, 224, 0.7);
+            color: white;
+        }
+
         &.active {
             background-color: $franceBlue;
             color: white;
