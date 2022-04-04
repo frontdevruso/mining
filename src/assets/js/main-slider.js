@@ -1,50 +1,11 @@
-if (document.querySelector('.main-slider')) {    
-    const gear = document.getElementById('gear');
+const mainSlider = document.querySelector('.main-slider');
+
+if (mainSlider) {
     const navSliderBar = document.getElementById('navMainSliderBar');
+    const arrowNext = document.querySelector('.main-slider__navigation-arrow--next');
+    const arrowPrev = document.querySelector('.main-slider__navigation-arrow--prev');
     const arrowsBtns = document.querySelectorAll('.main-slider__navigation-arrow');
-
-    let mainSlider = new Swiper('.main-slider', {
-        direction: 'horizontal',
-        slidesPerView: 1,
-        spaceBetween: 120,
-        speed: 600,
-    
-        pagination: {
-            el: ".main-slider__navigation-fraction",
-            clickable: true,
-            type: "fraction",
-        },
-
-        navigation: {
-            nextEl: ".main-slider__navigation-arrow--next",
-            prevEl: ".main-slider__navigation-arrow--prev",
-        },
-        
-        breakpoints: {
-            575: {
-                direction: 'vertical',
-            },
-        }
-    });
-
-    const arrowsCoolDown = () => {
-        arrowsBtns.forEach(function(btn) {
-            btn.disabled = true;
-            setTimeout(function() { btn.disabled = false }, 500);
-        });
-    }
-
-    const reassignmentActiveLine = (elementIndex) => {
-        navSliderBar.querySelector('.active').classList.remove('active');
-        navSliderBar.querySelector(' :nth-child(' + elementIndex +')').classList.add('active');
-    }
-
-    const gearRotating = (deg) => {
-        const currentPosition = document.getElementById('gear').getAttribute('data-position');
-        const newPosition = Number(currentPosition) + deg;
-        gear.setAttribute('data-position', Number(currentPosition) + deg);
-        gear.style.transform = "rotate(" + newPosition + "deg)";
-    }
+    const allItems = document.querySelectorAll('.main-slider__item');
 
     const onPrevAddLine = () => {
         let newLine = document.createElement('span');
@@ -74,17 +35,91 @@ if (document.querySelector('.main-slider')) {
         }, 400);
     }
 
-    mainSlider.on('slidePrevTransitionStart', function() {
-        gearRotating(35);
-        onPrevAddLine();
-        arrowsCoolDown();
-        reassignmentActiveLine(4);
-    });
+    const gearRotating = (deg) => {
+        const currentPosition = document.getElementById('gear').getAttribute('data-position');
+        const newPosition = Number(currentPosition) + deg;
+        gear.setAttribute('data-position', Number(currentPosition) + deg);
+        gear.style.transform = "rotate(" + newPosition + "deg)";
+    }
+
+    const arrowsCoolDown = () => {
+        arrowsBtns.forEach(function(btn) {
+            btn.disabled = true;
+            setTimeout(function() { btn.disabled = false }, 500);
+        });
+    }
+
+    const reassignmentActiveLine = (elementIndex) => {
+        navSliderBar.querySelector('.active').classList.remove('active');
+        navSliderBar.querySelector(' :nth-child(' + elementIndex +')').classList.add('active');
+    }
+
+    const fractionPosition = () => {
+        const current = document.querySelector('.swiper-pagination-current');
+        const total = document.querySelector('.swiper-pagination-total');
+
+        total.innerHTML = allItems.length;
+
+        let currElem = $('.main-slider__item').filter('.main-slider__item--active');
+        current.innerHTML = currElem.index() + 1;
+    }
+
+    const changeNextSlide = () => {
+        $('.main-slider__item').each(function(index) {
+            $(this).css('transform', $(this).prev().attr('data-transform'))
+        });
+
+        $('.main-slider__item--1').css('transform', $('.main-slider__item--8').attr('data-transform'));
+        setTimeout(function() {
+            $('.main-slider__item--active').next().addClass('main-slider__item--active').prev().removeClass('main-slider__item--active');
+        }, 400)
+
+        document.querySelectorAll('.main-slider__item').forEach(function(item) {
+            item.setAttribute('data-transform', item.style.transform);
+        });
+    }
+
+    const changePrevSlide = () => {
+        $('.main-slider__item').each(function(index) {
+            $(this).css('transform', $(this).next().attr('data-transform'))
+        });
+
+        $('.main-slider__item--8').css('transform', $('.main-slider__item--1').attr('data-transform'));
+        setTimeout(function() {
+            $('.main-slider__item--active').prev().addClass('main-slider__item--active').next().removeClass('main-slider__item--active');
+        }, 100)
+
+        document.querySelectorAll('.main-slider__item').forEach(function(item) {
+            item.setAttribute('data-transform', item.style.transform);
+        });
+    }
+
+    arrowNext.addEventListener('click', function() {
+        if (!document.querySelector('.main-slider__item--active').classList.contains('main-slider__item--8')) {
+            gearRotating(-35);
+            onNextAddLine();
+            arrowsCoolDown();
+            reassignmentActiveLine(5);
+            fractionPosition();
     
-    mainSlider.on('slideNextTransitionStart', function() {
-        gearRotating(-35);
-        onNextAddLine();
-        arrowsCoolDown();
-        reassignmentActiveLine(5);
+            changeNextSlide();
+            let currElem = $('.main-slider__item').filter('.main-slider__item--active');
+            document.querySelector('.swiper-pagination-current').innerHTML = (currElem.index() + 1) + 1;
+        }
     });
-}
+
+    arrowPrev.addEventListener('click', function() {
+        if (!document.querySelector('.main-slider__item--active').classList.contains('main-slider__item--1')) {
+            gearRotating(35);
+            onPrevAddLine();
+            arrowsCoolDown();
+            reassignmentActiveLine(4)
+            fractionPosition();
+
+            changePrevSlide();
+            let currElem = $('.main-slider__item').filter('.main-slider__item--active');
+            document.querySelector('.swiper-pagination-current').innerHTML = (currElem.index() + 1) - 1;
+        }
+    });
+
+} 

@@ -46,6 +46,7 @@ input:focus, textarea:focus, button:focus {
 .page { 
     position: relative; 
     overflow: hidden; 
+    min-height: 2080px; // Временно
 }
 
 .container__1200px {

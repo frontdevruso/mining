@@ -1,5 +1,5 @@
 ---
-layout: default-map
+layout: main-page-template
 title: Гормаш Глобал
 ---
 
@@ -22,8 +22,6 @@ title: Гормаш Глобал
       <a class="g-blue-btn" href="#">Связаться с нами</a>
     </div>
     <div class="intro__mechanism">
-      <img class="intro__mechanism-img intro__mechanism-img--top lozad" data-src="./assets/images/main-slider-additionally-1.png" data-srcset="./assets/images/main-slider-additionally-1@2x.png" alt="main-slider-additional-image">
-      <img class="intro__mechanism-img intro__mechanism-img--bottom lozad" data-src="./assets/images/main-slider-additionally-2.png" data-srcset="./assets/images/main-slider-additionally-2@2x.png" alt="main-slider-additional-image">
       <div class="gear__wrapper">
         <svg id="gear" class="gear" style="transform: rotate(0deg);" data-position="15" width="549" height="567">
           <use xlink:href="./assets/images/svg/sprite.svg#gear"></use>
@@ -35,7 +33,9 @@ title: Гормаш Глобал
             <svg><use xlink:href="./assets/images/svg/sprite.svg#sliderArrow"></use></svg>
           </button>
 
-          <div class="swiper-pagination main-slider__navigation-fraction navigation-fraction"></div>
+          <div class="swiper-pagination main-slider__navigation-fraction navigation-fraction">
+            <span class="swiper-pagination-current">1</span> / <span class="swiper-pagination-total">8</span>
+          </div>
 
           <button class="navigation-arrows navigation-arrows--next main-slider__navigation-arrow main-slider__navigation-arrow--next">
             <svg><use xlink:href="./assets/images/svg/sprite.svg#sliderArrow"></use></svg>
@@ -51,129 +51,126 @@ title: Гормаш Глобал
           <span></span>
         </div>
       </div>
-      <div class="main-slider swiper">
-        <div class="swiper-wrapper">
-          <!-- ITEM -->
-          <div class="swiper-slide main-slider__item">
-            <div class="main-slider__item-img">
-              <img width="363" height="350" class="lozad" data-src="./assets/images/main-slider-1.png" data-srcset="./assets/images/main-slider-1@2x.png" alt="main-slider">
-            </div>
-            <div class="main-slider__item-info">
-              <h3>Maquina SBM 400 LP</h3>
-              <p>
-                Автоматизированная буровая
-                <br> установка с диаметром трубы <b>от 1,5 до 2,1м</b>
-                и максимальной длиной бурения — <b>480м</b>
-              </p>
-              <a class="g-transparent-btn" href="#">Подробнее</a>
-            </div>
+      <div class="main-slider main-slider--1" data-item-position="1">
+        <!-- ITEM -->
+        <div class="main-slider__item main-slider__item--1 main-slider__item--active" id="main-slider__item--1" style="transform: translate(-200%, -60%);" data-transform="translate(-200%, -60%)">
+          <div class="main-slider__item-img">
+            <img width="363" height="350" class="lozad" data-src="./assets/images/main-slider-1.png" data-srcset="./assets/images/main-slider-1@2x.png" alt="main-slider">
           </div>
-          <!-- ITEM -->
-          <div class="swiper-slide main-slider__item">
-            <div class="main-slider__item-img">
-              <img width="363" height="350" class="lozad" data-src="./assets/images/main-slider-1.png" data-srcset="./assets/images/main-slider-1@2x.png" alt="main-slider">
-            </div>
-            <div class="main-slider__item-info">
-              <h3>Maquina SBM 400 LP</h3>
-              <p>
-                Автоматизированная буровая
-                <br> установка с диаметром трубы <b>от 1,5 до 2,1м</b>
-                и максимальной длиной бурения — <b>480м</b>
-              </p>
-              <a class="g-transparent-btn" href="#">Подробнее</a>
-            </div>
+          <div class="main-slider__item-info">
+            <h3>Maquina SBM 400 LP</h3>
+            <p>
+              Автоматизированная буровая
+              <br> установка с диаметром трубы <b>от 1,5 до 2,1м</b>
+              и максимальной длиной бурения — <b>480м</b>
+            </p>
+            <a class="g-transparent-btn" href="#">Подробнее</a>
           </div>
-          <!-- ITEM -->
-          <div class="swiper-slide main-slider__item">
-            <div class="main-slider__item-img">
-              <img width="363" height="350" class="lozad" data-src="./assets/images/main-slider-1.png" data-srcset="./assets/images/main-slider-1@2x.png" alt="main-slider">
-            </div>
-            <div class="main-slider__item-info">
-              <h3>Maquina SBM 400 LP</h3>
-              <p>
-                Автоматизированная буровая
-                <br> установка с диаметром трубы <b>от 1,5 до 2,1м</b>
-                и длиной бурения — <b>480м</b>
-              </p>
-              <a class="g-transparent-btn" href="#">Подробнее</a>
-            </div>
+        </div>
+        <!-- ITEM -->
+        <div class="main-slider__item main-slider__item--2" id="main-slider__item--2 " style="transform: translate(-150%, 80%)" data-transform="translate(-150%, 80%)">
+          <div class="main-slider__item-img">
+            <img width="363" height="350" class="lozad" data-src="./assets/images/store-5.png" data-srcset="./assets/images/store-5@2x.png" alt="main-slider">
           </div>
-          <!-- ITEM -->
-          <div class="swiper-slide main-slider__item">
-            <div class="main-slider__item-img">
-              <img width="363" height="350" class="lozad" data-src="./assets/images/main-slider-1.png" data-srcset="./assets/images/main-slider-1@2x.png" alt="main-slider">
-            </div>
-            <div class="main-slider__item-info">
-              <h3>Maquina SBM 400 LP</h3>
-              <p>
-                Автоматизированная буровая
-                <br> установка с диаметром трубы <b>от 1,5 до 2,1м</b>
-                и максимальной длиной — <b>480м</b>
-              </p>
-              <a class="g-transparent-btn" href="#">Подробнее</a>
-            </div>
+          <div class="main-slider__item-info">
+            <h3>Maquina SBM 400 LP</h3>
+            <p>
+              Автоматизированная буровая
+              <br> установка с диаметром трубы <b>от 1,5 до 2,1м</b>
+              и максимальной длиной бурения — <b>480м</b>
+            </p>
+            <a class="g-transparent-btn" href="#">Подробнее</a>
           </div>
-          <!-- ITEM -->
-          <div class="swiper-slide main-slider__item">
-            <div class="main-slider__item-img">
-              <img width="363" height="350" class="lozad" data-src="./assets/images/main-slider-1.png" data-srcset="./assets/images/main-slider-1@2x.png" alt="main-slider">
-            </div>
-            <div class="main-slider__item-info">
-              <h3>Maquina SBM 400 LP</h3>
-              <p>
-                Автоматизированная буровая
-                <br> установка с диаметром трубы <b>от 1,5 до 2,1м</b>
-                и максимальной длиной бурения — <b>480м</b>
-              </p>
-              <a class="g-transparent-btn" href="#">Подробнее</a>
-            </div>
+        </div>
+        <!-- ITEM -->
+        <div class="main-slider__item main-slider__item--3" id="main-slider__item--3 opacity-0" style="transform: translate(-40%, 100%)" data-transform="translate(-40%, 100%)">
+          <div class="main-slider__item-img">
+            <img width="363" height="350" class="lozad" data-src="./assets/images/main-slider-1.png" data-srcset="./assets/images/main-slider-1@2x.png" alt="main-slider">
           </div>
-          <!-- ITEM -->
-          <div class="swiper-slide main-slider__item">
-            <div class="main-slider__item-img">
-              <img width="363" height="350" class="lozad" data-src="./assets/images/main-slider-1.png" data-srcset="./assets/images/main-slider-1@2x.png" alt="main-slider">
-            </div>
-            <div class="main-slider__item-info">
-              <h3>Maquina SBM 400 LP</h3>
-              <p>
-                Автоматизированная буровая
-                <br> установка с диаметром трубы <b>от 1,5 до 2,1м</b>
-                и максимальной длиной бурения — <b>480м</b>
-              </p>
-              <a class="g-transparent-btn" href="#">Подробнее</a>
-            </div>
+          <div class="main-slider__item-info">
+            <h3>Maquina SBM 400 LP</h3>
+            <p>
+              Автоматизированная буровая
+              <br> установка с диаметром трубы <b>от 1,5 до 2,1м</b>
+              и длиной бурения — <b>480м</b>
+            </p>
+            <a class="g-transparent-btn" href="#">Подробнее</a>
           </div>
-          <!-- ITEM -->
-          <div class="swiper-slide main-slider__item">
-            <div class="main-slider__item-img">
-              <img width="363" height="350" class="lozad" data-src="./assets/images/main-slider-1.png" data-srcset="./assets/images/main-slider-1@2x.png" alt="main-slider">
-            </div>
-            <div class="main-slider__item-info">
-              <h3>Maquina SBM 400 LP</h3>
-              <p>
-                Автоматизированная буровая
-                <br> установка с диаметром трубы <b>от 1,5 до 2,1м</b>
-                и максимальной длиной бурения — <b>480м</b>
-              </p>
-              <a class="g-transparent-btn" href="#">Подробнее</a>
-            </div>
+        </div>
+        <!-- ITEM -->
+        <div class="main-slider__item main-slider__item--4" id="main-slider__item--4 opacity-0" style="transform: translate(60%, 60%)" data-transform="translate(60%, 60%)">
+          <div class="main-slider__item-img">
+            <img width="363" height="350" class="lozad" data-src="./assets/images/main-slider-1.png" data-srcset="./assets/images/main-slider-1@2x.png" alt="main-slider">
           </div>
-          <!-- ITEM -->
-          <div class="swiper-slide main-slider__item">
-            <div class="main-slider__item-img">
-              <img width="363" height="350" class="lozad" data-src="./assets/images/main-slider-1.png" data-srcset="./assets/images/main-slider-1@2x.png" alt="main-slider">
-            </div>
-            <div class="main-slider__item-info">
-              <h3>Maquina SBM 400 LP</h3>
-              <p>
-                Автоматизированная буровая
-                <br> установка с диаметром трубы <b>от 1,5 до 2,1м</b>
-                и максимальной длиной бурения — <b>480м</b>
-              </p>
-              <a class="g-transparent-btn" href="#">Подробнее</a>
-            </div>
+          <div class="main-slider__item-info">
+            <h3>Maquina SBM 400 LP</h3>
+            <p>
+              Автоматизированная буровая
+              <br> установка с диаметром трубы <b>от 1,5 до 2,1м</b>
+              и максимальной длиной — <b>480м</b>
+            </p>
+            <a class="g-transparent-btn" href="#">Подробнее</a>
           </div>
-      
+        </div>
+        <!-- ITEM -->
+        <div class="main-slider__item main-slider__item--5" id="main-slider__item--5 opacity-0" style="transform: translate(100%, -50%)" data-transform="translate(100%, -50%)">
+          <div class="main-slider__item-img">
+            <img width="363" height="350" class="lozad" data-src="./assets/images/store-2.png" data-srcset="./assets/images/store-2@2x.png" alt="main-slider">
+          </div>
+          <div class="main-slider__item-info">
+            <h3>Maquina SBM 400 LP</h3>
+            <p>
+              Автоматизированная буровая
+              <br> установка с диаметром трубы <b>от 1,5 до 2,1м</b>
+              и максимальной длиной бурения — <b>480м</b>
+            </p>
+            <a class="g-transparent-btn" href="#">Подробнее</a>
+          </div>
+        </div>
+        <!-- ITEM -->
+        <div class="main-slider__item main-slider__item--6" id="main-slider__item--6 opacity-0" style="transform: translate(60%, -160%)" data-transform="translate(60%, -160%)">
+          <div class="main-slider__item-img">
+            <img width="363" height="350" class="lozad" data-src="./assets/images/store-4.png" data-srcset="./assets/images/store-4@2x.png" alt="main-slider">
+          </div>
+          <div class="main-slider__item-info">
+            <h3>Maquina SBM 400 LP</h3>
+            <p>
+              Автоматизированная буровая
+              <br> установка с диаметром трубы <b>от 1,5 до 2,1м</b>
+              и максимальной длиной бурения — <b>480м</b>
+            </p>
+            <a class="g-transparent-btn" href="#">Подробнее</a>
+          </div>
+        </div>
+        <!-- ITEM -->
+        <div class="main-slider__item main-slider__item--7" id="main-slider__item--7 opacity-0" style="transform: translate(-45%, -200%)" data-transform="translate(-50%, -200%)">
+          <div class="main-slider__item-img">
+            <img width="363" height="350" class="lozad" data-src="./assets/images/main-slider-1.png" data-srcset="./assets/images/main-slider-1@2x.png" alt="main-slider">
+          </div>
+          <div class="main-slider__item-info">
+            <h3>Maquina SBM 400 LP</h3>
+            <p>
+              Автоматизированная буровая
+              <br> установка с диаметром трубы <b>от 1,5 до 2,1м</b>
+              и максимальной длиной бурения — <b>480м</b>
+            </p>
+            <a class="g-transparent-btn" href="#">Подробнее</a>
+          </div>
+        </div>
+        <!-- ITEM -->
+        <div class="main-slider__item main-slider__item--8" id="main-slider__item--8 " style="transform: translate(-150%, -140%)" data-transform="translate(-150%, -140%)">
+          <div class="main-slider__item-img">
+            <img width="363" height="350" class="lozad" data-src="./assets/images/store-4.png" data-srcset="./assets/images/store-4@2x.png" alt="main-slider">
+          </div>
+          <div class="main-slider__item-info">
+            <h3>Maquina SBM 400 LP</h3>
+            <p>
+              Автоматизированная буровая
+              <br> установка с диаметром трубы <b>от 1,5 до 2,1м</b>
+              и максимальной длиной бурения — <b>480м</b>
+            </p>
+            <a class="g-transparent-btn" href="#">Подробнее</a>
+          </div>
         </div>
       </div>
     </div>
