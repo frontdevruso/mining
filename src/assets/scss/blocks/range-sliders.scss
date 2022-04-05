@@ -47,6 +47,8 @@
         align-items: center;
         justify-content: space-between;
 
+        user-select: none;
+
         span {
             color: $niche;
             font-size: 14px;
@@ -88,6 +90,9 @@
         justify-content: center;
 
         box-sizing: border-box;
+        cursor: pointer;
+
+        .noUi-touch-area { border: 30px solid transparent }
 
         &::after {
             width: 0;

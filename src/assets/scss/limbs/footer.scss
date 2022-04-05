@@ -40,6 +40,7 @@
         
         transition: .4s;
         text-decoration: underline;
+        width: fit-content;
 
         @media (max-width: 768px) { display: none }
 

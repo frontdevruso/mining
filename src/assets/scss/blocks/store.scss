@@ -110,10 +110,13 @@
                     align-items: center;
                     justify-content: space-between;
 
+                    user-select: none;
+
                     form {
                         display: flex;
 
                         .store__wrapper-filters-title-radio {
+                            cursor: pointer;
 
                             &:not(:last-child) { margin-right: 30px }
                             input { display: none }
@@ -122,6 +125,8 @@
                                 color: $niche;
                                 font-size: 14px;
                                 font-weight: 400;
+
+                                cursor: pointer;
                                 line-height: 1;
 
                                 display: flex;
