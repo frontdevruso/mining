@@ -163,9 +163,7 @@
                 @media (max-width: 575px) { margin: 20px 0 0 20px }
             }
 
-            &:hover {
-                box-shadow: 0px 0px 50px rgba(43, 126, 224, 0.75);
-            }
+            &:hover { box-shadow: 0px 0px 25px rgba(43, 126, 224, 0.6) }
         }
     }
 }

@@ -11,6 +11,60 @@
     align-items: center;
     z-index: 5;
 
+    &--main {
+        @media (max-width: 768px) {
+            left: 50%;
+            top: initial;
+            transform: translateX(-50%);
+            bottom: -30px;
+            
+            width: fit-content;
+            height: fit-content;
+    
+            .navigation-wrapper { display: none }
+    
+            .navigation-lines {
+                flex-direction: row;
+                margin-left: 0;
+
+                .new-created { height: initial; width: 0; }
+
+                span {
+                    width: 1.7em;
+                    height: 0.1em;
+
+                    &:not(:last-child) { margin-right: 0.5em; margin-bottom: 0; }
+                }
+            }
+        }
+        
+        @media (max-width: 375px) {
+            left: 50%;
+            top: initial;
+            transform: translateX(-50%);
+            bottom: -30px;
+            
+            width: fit-content;
+            height: fit-content;
+    
+            .navigation-wrapper { display: none }
+    
+            .navigation-lines {
+                flex-direction: row;
+                margin-left: 0;
+
+                .new-created { height: initial; width: 0; }
+
+                span {
+                    width: 1.6em;
+                    height: 0.1em;
+
+                    &:not(:last-child) { margin-right: 0.5em; margin-bottom: 0; }
+                }
+            }
+        }
+    }
+
     &-wrapper { 
         width: 2.1em;
         display: flex;
@@ -149,23 +203,12 @@
             &:nth-child(6) { opacity: .5 }
         }
 
-        &--main-slider {
-            @media (max-width: 575px) { display: none }
-        }
-
         &--horizontal {
             width: fit-content;
             transform: rotate(90deg);
         }
     }
 
-    @media (max-width: 1200px) { right: 5% }
-    @media (max-width: 575px) { 
-        bottom: 0%;
-        top: initial;
-        transform: initial;
-        height: fit-content;
-    }
     @media (max-width: 400px) { right: 0 }
 
     &--services {
