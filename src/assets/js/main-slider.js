@@ -94,7 +94,6 @@ if (mainSlider) {
         });
     }
 
-
     if ($(window).width() >= 768) {
         arrowNext.addEventListener('click', function() {
             if (!document.querySelector('.main-slider__item--active').classList.contains('main-slider__item--8')) {
@@ -125,29 +124,37 @@ if (mainSlider) {
         });
     }
 
-    if ($(window).width() <= 768) {
-        mainSlider.classList.add('swiper');
-
-        document.querySelectorAll('.main-slider__item').forEach(function(item) {
-            item.classList.add('swiper-slide');
-        });
-
-        let mainMbSlider = new Swiper('.main-slider', {
-            slidesPerView: 1,
-            slidesPerGroup: 1,
-            centeredSlides: true,
-            spaceBetween: 30,
-            speed: 600,
-        });
-
-        mainMbSlider.on('slidePrevTransitionStart', function() {
-            onPrevAddLine();
-            reassignmentActiveLine(4);
-        });
+    (function() {
+        window.onresize = displayWindowSize;
+        window.onload = displayWindowSize;
+    
+        function displayWindowSize() {
+            let myWidth = window.innerWidth;
+            if (myWidth <= 768) {
+                mainSlider.classList.add('swiper');
         
-        mainMbSlider.on('slideNextTransitionStart', function() {
-            onNextAddLine();
-            reassignmentActiveLine(5);
-        });
-    }
+                document.querySelectorAll('.main-slider__item').forEach(function(item) {
+                    item.classList.add('swiper-slide');
+                });
+        
+                let mainMbSlider = new Swiper('.main-slider', {
+                    slidesPerView: 1,
+                    slidesPerGroup: 1,
+                    centeredSlides: true,
+                    spaceBetween: 30,
+                    speed: 600,
+                });
+        
+                mainMbSlider.on('slidePrevTransitionStart', function() {
+                    onPrevAddLine();
+                    reassignmentActiveLine(4);
+                });
+                
+                mainMbSlider.on('slideNextTransitionStart', function() {
+                    onNextAddLine();
+                    reassignmentActiveLine(5);
+                });
+            }
+        };
+    })();
 } 
