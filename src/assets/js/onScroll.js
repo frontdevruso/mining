@@ -1,11 +1,10 @@
-if (document.getElementById('#charImg1')) {
+if (document.querySelector('.charts')) {
     const showOnScroll = (elem) => {
         $(window).scroll(function() {
             let hT = $(`#${elem}`).offset().top,
                 hH = $(`#${elem}`).outerHeight(),
                 wH = $(window).height(),
                 wS = $(this).scrollTop();
-            let workOnce = true;
             if (wS > (hT+hH-wH)){
                 document.getElementById(elem).classList.remove('chart-img-none');
             }

@@ -5,7 +5,7 @@
     @media (max-width: 1300px) { font-size: 0.9em }
     @media (max-width: 1150px) { font-size: 0.8em }
     @media (max-width: 1024px) { font-size: 1em }
-    @media (max-width: 400px) { margin-bottom: 6em }
+    @media (max-width: 400px) { margin-bottom: 5em }
 
     h1 { margin-bottom: 1.5em }
 
@@ -27,12 +27,20 @@
             flex-direction: column;
             transition: .4s;
 
+            &:hover {
+                .equipment__table-item-img {
+                    transform: scale(1.2);
+                }
+            }
+
             &-img {
                 width: fit-content;
                 height: fit-content;
 
                 display: flex;
                 align-items: center;
+                justify-content: center;
+                transition: 4s;
 
                 margin: auto 0;
 
@@ -66,7 +74,7 @@
                 }
 
                 @media (max-width: 400px) { 
-                    img { width: 80% }
+                    img { width: 90% }
                 }
             }
 
@@ -91,13 +99,8 @@
                     padding-top: 0.5em;
                 }
 
-                @media (max-width: 400px) { 
-                    font-size: 12px;
-                }
-
-                @media (max-width: 375px) { 
-                    font-size: 10px;
-                }
+                @media (max-width: 400px) {  font-size: 12px }
+                @media (max-width: 350px) { font-size: 10px }
             }
 
             &:hover {
@@ -141,6 +144,7 @@
 
         @media (max-width: 1024px) { 
             grid-template-columns: 1fr 1fr;
+            grid-gap: .7em;
         }
 
         @media (max-width: 768px) { 

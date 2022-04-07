@@ -49,7 +49,8 @@
             margin-bottom: 1em;
 
             @media (max-width: 768px) { display: block }
-            @media (max-width: 375px) { font-size: 0.8em }
+            @media (max-width: 375px) { font-size: 0.9em }
+            @media (max-width: 350px) { font-size: 0.8em }
         }
 
         &:hover { color: darken($franceBlue, 15%) }
@@ -69,6 +70,7 @@
 
                 &:not(:last-child) { margin-right: 0.9375em }
                 box-sizing: border-box;
+                text-align: center;
             }
 
             @media (max-width: 992px) { 
@@ -76,6 +78,7 @@
                 margin-bottom: 2em;
 
                 a {
+                    width: 100%;
                     margin-left: auto;
                     &:not(:last-child) { margin-right: 0; margin-bottom: 0.9375em }
                 }
@@ -84,8 +87,9 @@
             @media (max-width: 768px) { 
                 flex-direction: row;
                 margin: 1.5em 0 2em 0;
-
+                
                 a {
+                    width: fit-content;
                     margin-left: initial;
                     &:not(:last-child) { margin: 0 15px 0 0 }
                 }
@@ -107,6 +111,10 @@
 
             @media (max-width: 375px) { 
                 margin: 0.75em 0 1.25em 0;
+                a { font-size: 14px }
+            }
+
+            @media (max-width: 350px) { 
                 a { font-size: 12px }
             }
         }
@@ -127,7 +135,8 @@
                 @media (max-width: 992px) { 
                     &:not(:last-child) { margin-right: 1em }
                 }
-                @media (max-width: 375px) { font-size: 0.8em }
+                @media (max-width: 375px) { font-size: 0.9em }
+                @media (max-width: 350px) { font-size: 0.8em }
 
                 &:hover { color: darken($franceBlue, 15%) }
             }
@@ -144,10 +153,11 @@
         padding: 12px 0;
         background-color: rgba(100, 115, 145, 0.25);
 
-        &-text {
-            width: 77px;
-            height: 25px;
-
+        h3 {
+            font-size: 16px;
+            font-family: 'Fira Sans', sans-serif;
+            
+            line-height: 130%;
             margin-right: 10px;
         }
 

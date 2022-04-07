@@ -68,7 +68,7 @@
                         }
 
                         @media (max-width: 992px) { max-width: 450px }
-                        @media (max-width: 375px) { font-size: 12px }
+                        @media (max-width: 350px) { font-size: 13px }
                     }
 
 
@@ -140,6 +140,8 @@
                 height: 24em;
                 margin-top: 2.5em;
             }
+
+            @media (max-width: 400px) { margin-top: 1.5em }
 
             &-address {
                 position: absolute;

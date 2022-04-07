@@ -66,9 +66,14 @@
             p { max-width: 286px }
         }
     }
-
+    
     &__img {
         height: 25em;
         background: 50% / cover no-repeat;
+        border: 1px solid $voidBlack;
+        
+        @media (max-width: 400px) {  
+            background: 50% / 264% 100% no-repeat;
+        }
     }
 }
