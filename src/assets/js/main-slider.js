@@ -178,10 +178,15 @@ if (mainSlider) {
         
                 let mainMbSlider = new Swiper('.main-slider', {
                     slidesPerView: 1,
-                    slidesPerGroup: 1,
-                    centeredSlides: true,
                     spaceBetween: 30,
                     speed: 600,
+
+                    breakpoints: {
+                        450: {
+                            slidesPerView: "auto",
+                            spaceBetween: 30,
+                        },
+                      }
                 });
         
                 mainMbSlider.on('slidePrevTransitionStart', function() {

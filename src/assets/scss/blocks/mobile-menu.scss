@@ -23,6 +23,22 @@
             transition: .4s;
             line-height: 120%;
 
+            &.active {
+                background-color: $franceBlue;
+                color: white;
+
+                main {
+                    svg { transform: rotate(180deg) }
+                }
+
+                .menu__drop-down {
+                    clip-path: initial; 
+                    height: 100%; 
+                    position: initial;
+                    background-color: $voidBlack;
+                }
+            }
+
             main {
                 display: flex;
                 align-items: center;
@@ -35,19 +51,11 @@
                     align-items: center;
                     transition: .4s;
                     
-                    &:hover { background-color: $franceBlue }
+                   
                     @media (max-width: 575px) { padding: 25px }
                     @media (max-width: 400px) { padding: 20px 25px }
                     @media (max-width: 375px) { padding: 15px 15px 15px 25px }
                 }
-            }
-
-            &:hover {
-                main {
-                    a {svg { transform: rotate(180deg) }}
-                }
-
-                .menu__drop-down { clip-path: initial; height: 100%; position: initial; }
             }
         }
 
@@ -58,7 +66,7 @@
         position: absolute;
         clip-path: polygon(0 0, 0 0, 0 0, 0 0);
         height: 0;
-
+        
         &-item {
             font-size: 18px;
             &-btn {
@@ -91,7 +99,7 @@
                 }
             }
 
-            &:hover {
+            &.active {
                 ul {
                     position: initial;
                     clip-path: initial; 
@@ -103,6 +111,7 @@
                     svg { stroke: $franceBlue; transform: rotate(180deg) }
                 }
             }
+
             @media (max-width: 450px) { font-size: 16px }
             @media (max-width: 375px) { font-size: 14px }
         }

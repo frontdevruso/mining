@@ -4,9 +4,17 @@
 
     margin-bottom: 5em;
 
+    @media (max-width: 768px) {
+        margin-bottom: 9em;
+    }
+
     &__container {
         overflow: hidden;
         @media (max-width: 1300px) { padding: 0 }
+
+        @media (max-width: 768px) {
+            overflow: initial;
+        }
     }
 
     &__info {
@@ -53,6 +61,14 @@
             background: linear-gradient(359.89deg, #0A1428 7.89%, rgba(10, 20, 40, 0.7) 37.53%, rgba(10, 20, 40, 0) 90%);
             padding-bottom: 2em;
 
+            position: static;
+            top: initial;
+            left: initial;
+            bottom: initial;
+
+            position: relative;
+            bottom: -15%;
+
             h1 { margin-bottom: 0.75em }
             p { font-size: 0.8em }
         }
@@ -72,8 +88,7 @@
         background: 50% / cover no-repeat;
         border: 1px solid $voidBlack;
         
-        @media (max-width: 400px) {  
-            background: 50% / 264% 100% no-repeat;
-        }
+        @media (max-width: 768px) { height: 27.5em }
+        @media (max-width: 400px) { background: 48% / 332% 100% no-repeat }
     }
 }

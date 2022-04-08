@@ -9,7 +9,7 @@
     p {
         font-size: 1em;
         line-height: 130%;
-        margin-bottom: 2em;
+
         @media (max-width: 992px) { font-size: 0.9em }
         @media (max-width: 400px) { font-size: 0.8em }
     }
@@ -42,12 +42,9 @@
         .active {
             background-color: $franceBlue;
             border-color: $franceBlue;
-
             color: white;
 
-            &:hover {
-                color: inherit;
-            }
+            &:hover { color: inherit }
         }
     }
 

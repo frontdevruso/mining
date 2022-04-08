@@ -127,3 +127,8 @@ input:focus, textarea:focus, button:focus {
 
     &::placeholder { color: #922B21 }
 }
+
+.swiper-button-disabled {
+    opacity: 0.5;
+    cursor: default;
+}
