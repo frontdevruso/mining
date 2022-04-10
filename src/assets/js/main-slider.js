@@ -163,42 +163,49 @@ if (mainSlider) {
         });
     }
 
-    (function() {
-        window.onresize = displayWindowSize;
-        window.onload = displayWindowSize;
-    
-        function displayWindowSize() {
-            let myWidth = window.innerWidth;
-            if (myWidth <= 768) {
-                mainSlider.classList.add('swiper');
-        
-                document.querySelectorAll('.main-slider__item').forEach(function(item) {
-                    item.classList.add('swiper-slide');
-                });
-        
-                let mainMbSlider = new Swiper('.main-slider', {
-                    slidesPerView: 1,
-                    spaceBetween: 30,
-                    speed: 600,
 
-                    breakpoints: {
-                        450: {
-                            slidesPerView: "auto",
-                            spaceBetween: 30,
-                        },
-                      }
-                });
+    $(document).ready(function() {
+        (function() {
+            window.onresize = displayWindowSize;
+            window.onload = displayWindowSize;
         
-                mainMbSlider.on('slidePrevTransitionStart', function() {
-                    onPrevAddLine();
-                    reassignmentActiveLine(4);
-                });
-                
-                mainMbSlider.on('slideNextTransitionStart', function() {
-                    onNextAddLine();
-                    reassignmentActiveLine(5);
-                });
-            }
-        };
-    })();
+            function displayWindowSize() {
+                let myWidth = window.innerWidth;
+                if (myWidth <= 768) {
+                    mainSlider.classList.add('swiper');
+            
+                    document.querySelectorAll('.main-slider__item').forEach(function(item) {
+                        item.classList.add('swiper-slide');
+                    });
+            
+                    let mainMbSlider = new Swiper('.main-slider', {
+                        slidesPerView: 1,
+                        spaceBetween: 30,
+                        speed: 600,
+    
+                        breakpoints: {
+                            450: {
+                                slidesPerView: "auto",
+                                spaceBetween: 30,
+                            },
+                          }
+                    });
+            
+                    mainMbSlider.on('slidePrevTransitionStart', function() {
+                        onPrevAddLine();
+                        reassignmentActiveLine(4);
+                    });
+                    
+                    mainMbSlider.on('slideNextTransitionStart', function() {
+                        onNextAddLine();
+                        reassignmentActiveLine(5);
+                    });
+                }
+            };
+
+            setTimeout(function() {
+                $('.main-slider').css('opacity', '1');
+            }, 400);
+        })();
+    })
 } 

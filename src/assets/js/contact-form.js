@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const contactFormSubmitBtn = document.getElementById('contactFormBtn');
     
         let regx = /^((([0-9A-Za-z]{1}[-0-9A-z\.]{1,}[0-9A-Za-z]{1})|([0-9А-Яа-я]{1}[-0-9А-я\.]{1,}[0-9А-Яа-я]{1}))@([-A-Za-z]{1,}\.){1,2}[-A-Za-z]{2,})$/u;
-    
+        
         formAllInput.forEach(function(item) {
             item.addEventListener('focus', function() {
                 item.classList.remove('g-input-error');

@@ -3,6 +3,10 @@
     flex-direction: column;
     width: 100%;
 
+    &--404 {
+        position: relative;
+    }
+
     &__container {
         display: flex;
         justify-content: space-between;

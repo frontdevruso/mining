@@ -3,18 +3,12 @@
     flex-direction: column;
 
     margin-bottom: 5em;
-
-    @media (max-width: 768px) {
-        margin-bottom: 9em;
-    }
+    @media (max-width: 768px) { margin-bottom: 9em }
 
     &__container {
         overflow: hidden;
         @media (max-width: 1300px) { padding: 0 }
-
-        @media (max-width: 768px) {
-            overflow: initial;
-        }
+        @media (max-width: 768px) { overflow: initial }
     }
 
     &__info {

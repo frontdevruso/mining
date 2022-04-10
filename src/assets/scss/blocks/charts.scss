@@ -11,6 +11,9 @@
 
         &--second {
             .charts__wrapper {
+                #charImg2 { max-width: 427px }
+                .charts__wrapper-info { margin-right: 0 }
+
                 @media (max-width: 992px) { flex-direction: column-reverse }
             }
         }
@@ -35,7 +38,7 @@
                 li {
                     display: flex;
                     line-height: 150%;
-                    font-size: 1em;
+                    font-size: 0.95em;
                     
                     &::before {
                         content: "";
@@ -103,7 +106,6 @@
         }
     }
 }
-
 
 .chart-img-none {
     img {
