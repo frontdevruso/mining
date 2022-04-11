@@ -45,9 +45,7 @@
 
         mapOnPage.addEventListener('click', function() {
             addScript('https://api-maps.yandex.ru/2.1/?apikey=6d392d39-d052-4d77-a01d-f9ed0da99f83&lang=ru_RU');
-            setTimeout(function() {
-                window.ymaps?.ready(init);
-            }, 400);
+            window.ymaps?.ready(init);
         }, {once : true});
     </script>
 

@@ -102,6 +102,7 @@ input:focus, textarea:focus, button:focus {
     background-color: transparent;
     color: white;
 
+    border-radius: 0;
     border: 0.05em solid $niche;
     padding: 0.9375em 1.25em;
 
@@ -131,4 +132,13 @@ input:focus, textarea:focus, button:focus {
 .swiper-button-disabled {
     opacity: 0.5;
     cursor: default;
+}
+
+.lozad--disabled {
+    opacity: 0;
+    transition: .4s;
+}
+
+.loaded {
+    opacity: 1;
 }

@@ -24,8 +24,12 @@ body {
 }
 
 .m-open {
+    overflow: hidden;
+    position: fixed;
+
     @media (max-width: 1024px) { 
         overflow: hidden;
+        position: fixed;
 
         .header {
             height: 100vh;

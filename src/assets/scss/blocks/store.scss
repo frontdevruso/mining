@@ -59,6 +59,7 @@
             &-panel {
                 display: flex;
                 flex-direction: column;
+                transition: .4s;
 
                 @media (max-width: 1024px) {
                     position: fixed;
@@ -71,7 +72,6 @@
                     z-index: -25;
                     opacity: 0;
 
-                    transition: .4s opacity;
                     box-sizing: border-box;
                     background-color: #0A1428;
 
@@ -92,7 +92,7 @@
                     margin-right: 10px;
 
                     padding: 0 1em;
-                    height: 46px;
+                    height: 48px;
             
                     width: 100%;
                 }
@@ -245,6 +245,30 @@
 
                     span { color: #2B7EE0 }
                 }
+            }
+
+            &-btns {
+                display: flex;
+            }
+
+            &-apply {
+                display: none;
+
+                background-color: $niche;
+                color: white;
+                border: none;
+
+                padding: 15px 20px;
+                font-size: 16px;
+                font-weight: 400;
+
+                transition: .4s;
+                width: fit-content;
+
+                &:hover { background-color: $franceBlue }
+                margin-left: 15px;
+
+                @media (max-width: 1024px) { display: flex }
             }
 
             &-reset {

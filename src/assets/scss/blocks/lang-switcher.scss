@@ -17,6 +17,14 @@
             &:first-child { border-left: none }
             &:last-child { border-right: none }
         }
+
+        @supports (-webkit-touch-callout: none) {
+            padding-bottom: 70px;
+            .lang-switcher__btn {
+                height: 70px;
+                border: 1px solid $franceBlue;
+            }
+        }
     }
 
     &__btn {

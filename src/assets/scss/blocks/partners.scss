@@ -1,5 +1,6 @@
 .partners {
     margin-bottom: 5em;
+    @media (max-width: 575px) { margin-bottom: 2.5em; }
 
     h1 { 
         line-height: 140%;

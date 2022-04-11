@@ -70,6 +70,8 @@
             }
     
             a {
+                min-height: 150px;
+
                 border: 0.05em solid #647391;
                 padding: 1em 1.5em 1.5em 1.5em;
                 height: 12.5em;
@@ -127,7 +129,6 @@
                     width: fit-content;
 
                     @media (max-width: 768px) { font-size: 0.8em }
-                    @media (max-width: 500px) { font-size: 0.7em }
                     @media (max-width: 400px) { font-size: 0.6em }
                 }
 

@@ -26,7 +26,7 @@
             width: 100%;
             transition: .4s;
 
-            &:focus {
+            &:hover, &:focus {
                 border-color: #2B7EE0;
                 color: #2B7EE0;
 

@@ -203,9 +203,9 @@ if (mainSlider) {
                 }
             };
 
-            setTimeout(function() {
+            window.addEventListener('load', function () {
                 $('.main-slider').css('opacity', '1');
-            }, 400);
+            });
         })();
     })
 } 
