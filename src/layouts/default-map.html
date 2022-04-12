@@ -30,8 +30,8 @@
                 balloonContent: null,
             }, {
                 iconLayout: "default#image",
-                iconImageHref: "./assets/images/map-marker.webp",
-                iconImageSize: [28, 37],
+                iconImageHref: "./assets/images/map-marker.svg",
+                iconImageSize: [36, 36],
             });
 
             map.geoObjects.add(placemark);
@@ -45,7 +45,9 @@
 
         mapOnPage.addEventListener('click', function() {
             addScript('https://api-maps.yandex.ru/2.1/?apikey=6d392d39-d052-4d77-a01d-f9ed0da99f83&lang=ru_RU');
-            window.ymaps?.ready(init);
+            setTimeout(function() {
+                window.ymaps?.ready(init);
+            }, 400);
         }, {once : true});
     </script>
 
