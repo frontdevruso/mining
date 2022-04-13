@@ -8,16 +8,36 @@ title: Гормаш Глобал | Магазин
         <h1 class="g-title">Буровой инструмент TUMI</h1>
         <div class="store__wrapper">
             <div class="store__wrapper-filters">
-                <form class="store__wrapper-filters-search search-bar">
-                    <div class="store__wrapper-filters-search-input search-bar__input">
-                        <svg><use xlink:href="./assets/images/svg/sprite.svg#searchIcon"></use></svg>
-                        <input class="g-input" type="text" placeholder="Поиск по названию">
-                    </div>
-                </form>
+                <div class="store__wrapper-filters-mini-panel">
+                    <form class="store__wrapper-filters-search search-bar">
+                        <div class="store__wrapper-filters-search-input search-bar__input">
+                            <svg><use xlink:href="./assets/images/svg/sprite.svg#searchIcon"></use></svg>
+                            <input class="g-input" type="text" placeholder="Поиск по названию">
+                        </div>
+                    </form>
+    
+                    <button class="filters-btn" id="filterBtn" type="button">
+                        <svg><use xlink:href="./assets/images/svg/sprite.svg#filterIcon"></use></svg>
+                    </button>
+                </div>
 
-                <button class="filters-btn" id="filterBtn" type="button">
-                    <svg><use xlink:href="./assets/images/svg/sprite.svg#filterIcon"></use></svg>
-                </button>
+                <ul>
+                    <!-- ITEM -->
+                    <li class="active">
+                        <button type="button"><svg><use xlink:href="./assets/images/svg/sprite.svg#closeSettingIcon"></use></svg></button>
+                        <span>Статические</span>
+                    </li>
+                    <!-- ITEM -->
+                    <li class="active">
+                        <button type="button"><svg><use xlink:href="./assets/images/svg/sprite.svg#closeSettingIcon"></use></svg></button>
+                        <span>Глубина 60-1489 м</span>
+                    </li>
+                    <!-- ITEM -->
+                    <li class="active">
+                        <button type="button"><svg><use xlink:href="./assets/images/svg/sprite.svg#closeSettingIcon"></use></svg></button>
+                        <span>Диаметр 1,2-3,7 м</span>
+                    </li>
+                </ul>
 
                 <div id="filterPanel" class="store__wrapper-filters-panel">
                     <div class="store__wrapper-filters-title store__wrapper-filters-title--close">

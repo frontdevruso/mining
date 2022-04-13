@@ -1,5 +1,7 @@
 .store {
     padding: 3em 0 5em;
+    @media (max-width: 1024px) { padding: 1.5em 0 5em }
+    @media (max-width: 450px) { padding: .5em 0 5em }
 
     &__container {
         display: flex;
@@ -10,9 +12,8 @@
         display: flex;
         margin-top: 2.5em;
 
-        @media (max-width: 1024px) {
-            flex-direction: column;
-        }
+        @media (max-width: 1024px) { flex-direction: column }
+        @media (max-width: 1024px) { margin-top: 1em }
 
         &-filters {
             padding: 1.5em;
@@ -23,6 +24,67 @@
             height: fit-content;
 
             background-color: #131E33;
+            overflow: hidden;
+
+            display: flex;
+            flex-direction: column;
+
+            ul {
+                display: none;
+                margin-bottom: 3em;
+
+                width: 100%;
+                min-width: 100%;
+                overflow-x: scroll;
+
+                @media (max-width: 400px) { margin-bottom: 2.5em }
+
+                &::-webkit-scrollbar { display: none }
+
+                li {
+                    display: none;
+                    align-items: center;
+                    justify-content: center;
+
+                    transition: .4s;
+
+                    &.active {
+                        display: flex;
+                    }
+                    
+                    button {
+                        padding: 0;
+                        background-color: transparent;
+
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        margin-bottom: 2px;
+                        
+                        svg {
+                            width: 11px;
+                            height: 11px;
+    
+                            fill: $franceBlue;
+                            margin-right: 10px;
+                        }
+                    }
+
+
+                    span {
+                        font-size: 0.7em;
+                        color: $franceBlue;
+                        white-space: nowrap;
+                    }
+
+                    &:not(:last-child) { margin-right: 1em }
+                }
+
+                @media (max-width: 1024px) {
+                    display: flex;
+                }
+            }
 
             @media (max-width: 1200px) { margin-right: 1em }
             @media (max-width: 1024px) {
@@ -53,6 +115,16 @@
                     height: 18px;
 
                     margin: auto;
+                }
+            }
+
+            &-mini-panel {
+                @media (max-width: 1024px) {
+                    display: flex;
+                    align-items: center;
+    
+                    width: 100%;
+                    margin-bottom: 0.75em;
                 }
             }
 
@@ -88,7 +160,7 @@
                 margin-bottom: 2em;
 
                 @media (max-width: 1024px) {
-                    margin-bottom: 2.5em;
+                    margin-bottom: 0;
                     margin-right: 10px;
 
                     padding: 0 1em;
@@ -188,14 +260,29 @@
 
                     button {
                         background-color: transparent;
-                        width: fit-content;
-                        height: fit-content;
+                        width: 25px;
+                        height: 25px;
 
                         padding: 0;
 
                         svg {
                             width: 25px;
                             height: 25px;
+                        }
+                    }
+
+                                            
+                    @media (max-width: 400px) { 
+                        margin-bottom: 30px;
+                        
+                        button {
+                            width: 15px;
+                            height: 15px;
+    
+                            svg  {
+                                width: 15px;
+                                height: 15px;
+                            }
                         }
                     }
 

@@ -1,6 +1,7 @@
 const filterBtn = document.getElementById('filterBtn');
 const filterCloseBtns = document.querySelectorAll('.store-close-filter-btn');
 const filterPanel = document.getElementById('filterPanel');
+const filterSettings = document.querySelectorAll('.store__wrapper-filters ul li');
 
 if (filterPanel) {
     filterBtn.addEventListener('click', function() {
@@ -14,4 +15,10 @@ if (filterPanel) {
             document.querySelector('body').classList.remove('f-open');
         });
     })
+
+    filterSettings.forEach(function(item) {
+        item.querySelector('button').addEventListener('click', function() {
+            item.classList.remove('active');
+        });
+    });
 }

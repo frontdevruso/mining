@@ -1,7 +1,11 @@
 .services {
     display: flex;
 
-    h1 { margin-bottom: 0.625em }
+    h1 {
+        margin-bottom: 0.625em;
+        @media (max-width: 400px) { font-size: 24px; padding: 0 25px; }
+        @media (max-width: 375px) { font-size: 20px }
+    }
 
     &__container {
         display: flex;
@@ -9,7 +13,8 @@
 
         margin-top: 3em;
 
-        @media (max-width: 500px) { margin-top: 25px }
+        @media (max-width: 768px) { margin-top: 25px }
+        @media (max-width: 400px) { padding: 0 }
     }
 
     &__paragraph {
@@ -21,12 +26,15 @@
 
         span { color: $franceBlue }
 
-        @media (max-width: 768px) {
-            font-size: 0.8em;
+        @media (max-width: 768px) { font-size: 0.8em }
+        @media (max-width: 400px) {
+            font-size: 0.9em;
+            margin-bottom: 3em;
+            padding: 0 25px; 
         }
+        @media (max-width: 375px) { font-size: 0.8em }
 
         @media (max-width: 500px) {
-            
             max-width: 26em;
         }
     }
@@ -63,6 +71,10 @@
             @media (max-width: 575px) {
                 padding: 0 1em 0 1em;
                 h1 { font-size: 20px }
+            }
+            @media (max-width: 400px) {
+                padding: 0 1.25em 0 1.25em;
+                h1 { padding: 0 }
             }
         }
 
@@ -342,12 +354,12 @@
                         }
 
                         @media (max-width: 768px) {
-                            transform: translate(-20%, 150%);
+                            transform: translate(-24%, 150%);
                             
                             picture {
                                 background-size: 100% 100%;
                                 background-image: url('./../images/svg/arrow-1-mb.svg');
-                                width: 130px;
+                                width: 170px;
                                 height: 40px;
 
                                 transform: scale(1, -1);
@@ -356,7 +368,7 @@
                             span {
                                 position: absolute;
                                 bottom: 0;left: 0;
-                                padding: 0 0 6px 0;
+                                padding: 0 0 6px 5px;
                             }
                         }
                     }

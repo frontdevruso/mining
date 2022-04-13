@@ -7,7 +7,7 @@
 
     @media (max-width: 1200px) { height: 30em }
     @media (max-width: 992px) { height: 35em; margin-bottom: 12em }
-    @media (max-width: 575px) { 
+    @media (max-width: 768px) { 
         height: 25em; 
         margin-bottom: 30em; 
         background: 80% / cover no-repeat;
@@ -23,7 +23,7 @@
         top: 0;bottom: 0;left: 0;right: 0;
 
         width: 100%;
-        height: 100%;
+        height: 102%;
         background: linear-gradient(68.23deg, #0A1428 14.4%, rgba(10, 20, 40, 0) 66.96%);
     }
 
@@ -57,7 +57,7 @@
         display: flex;
         flex-direction: column;
 
-        @media (max-width: 575px) {
+        @media (max-width: 768px) {
             padding: 0 25px;
             position: absolute;
             width: calc(100% - 50px);
@@ -83,9 +83,10 @@
 
         @media (max-width: 1200px) { font-size: 0.8em }
         @media (max-width: 992px) { margin-bottom: 14em }
-        @media (max-width: 575px) { 
+        @media (max-width: 768px) { 
             margin-bottom: 4em;
             margin-top: 22em; 
+            max-width: 453px;
             p { 
                 font-size: 0.9em;
                 &:not(:last-child) { margin-bottom: 15px }
@@ -153,7 +154,7 @@
                 box-sizing: border-box;
             }
 
-            @media (max-width: 575px) {
+            @media (max-width: 768px) {
                 width: 100%;
                 &:not(:last-child) { margin-bottom: 15px }
             }
@@ -190,8 +191,8 @@
             grid-template-columns: none;
         }
 
-        @media (max-width: 575px) {
-            transform: translateY(140%);
+        @media (max-width: 768px) {
+            transform: translateY(145%);
 
             grid-gap: 0;
 

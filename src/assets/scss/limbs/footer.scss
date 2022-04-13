@@ -26,16 +26,21 @@
         max-width: 18.85em;
 
         h2 {
-            font-size: 0.9em;
+            font-size: 1em;
             line-height: 140%;
+
+            @media (max-width: 350px) { font-size: 0.9em }
         }
 
         p {
             color: $niche;
-            font-size: 0.8em;
+            font-size: 0.9em;
 
             margin: 0.625em 0 0.9375em;
             line-height: 140%;
+
+            
+            @media (max-width: 350px) { font-size: 0.8em }
         }
     }
 
