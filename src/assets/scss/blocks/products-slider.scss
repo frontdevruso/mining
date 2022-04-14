@@ -23,7 +23,7 @@
         @media (max-width: 768px) {
             h1 {
                 font-size: 26px;
-                max-width: 320px;
+                max-width: 220px;
                 margin-right: 20px;
             }
         }
@@ -31,7 +31,7 @@
         @media (max-width: 500px) {
             h1 {
                 font-size: 18px;
-                max-width: 210px;
+                max-width: 150px;
             }
         }
 
@@ -42,7 +42,7 @@
 
             h1 {
                 font-size: 20px;
-                max-width: 280px;
+                max-width: 220px;
 
                 margin-bottom: 15px;
             }
@@ -85,6 +85,8 @@
                 flex-direction: column;
                 transition: .4s;
 
+                @media (max-width: 1024px) { align-items: center }
+
                 @media (max-width: 500px) {
                     text-align: left;
                     align-items: initial;
@@ -92,9 +94,7 @@
                     padding: 0.75em 0.5em 0.75em 0.75em;
                 }
 
-                @media (max-width: 400px) {
-                    height: auto;
-                }
+                @media (max-width: 400px) { height: auto }
     
                 div {
                     width: fit-content;
