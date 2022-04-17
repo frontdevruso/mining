@@ -107,4 +107,141 @@
             @media (max-width: 400px) { height: 3em }
         }
     }
+
+    &--main {
+        p {
+            max-width: 590px;
+            line-height: 150%;
+        }
+
+        .partners__wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-column-gap: 1em;
+
+            margin-top: 2em;
+
+            @media (max-width: 768px) {
+                grid-template-columns: 1fr;
+                grid-row-gap: 1.5em;
+            }
+
+            @media (max-width: 400px) {
+                grid-row-gap: 1em;
+            }
+
+            @media (max-width: 400px) {
+                margin-top: 1.5em;
+            }
+
+            &-item {
+                background-color: #131D32;
+                background-image: url(./../images/contacts-bg.png);
+                background-repeat: no-repeat;
+                background-size: 347px 176px;
+                background-position: top right;
+
+                display: flex;
+                flex-direction: column;
+                padding: 2.5em;
+
+                img {
+                    width: 8em;
+                    height: 6em;
+
+                    margin-bottom: 1.5em;
+                }
+
+                p {
+                    font-size: 0.8em;
+                    font-style: italic;
+                    font-weight: 500;
+                    color: $niche;
+
+                    max-width: 95%;
+
+                    margin-bottom: 1.25em;
+                }
+
+                a {
+                    display: flex;
+                    align-items: center;
+                    width: fit-content;
+                    
+                    span {
+                        color: $franceBlue;
+                        font-size: 0.7em;
+
+                        display: flex;
+                        align-items: center;
+
+                        &::after {
+                            content: "";
+                            display: block;
+
+                            width: 0;
+                            height: 1px;
+
+                            transition: .4s;
+                            margin: 0 2px 0 5px;
+
+                            background-color: $franceBlue;
+                        }
+                    }
+
+                    svg {
+                        stroke: $franceBlue;
+                        width: 10px;
+                        height: 5px;
+
+                        margin-top: 0;
+                        margin-left: 0;
+                    }
+                    
+                    &:hover {
+                        span {
+                            &::after { width: 20px }
+                        }
+                    }
+                }
+
+                @media (max-width: 1024px) {
+                    background-size: 191px 96px;
+                    padding: 1em 1em 1.5em 1em;
+
+                    img {
+                        width: 7em;
+                        height: 105px;
+                    }
+
+                    p { font-size: 0.7em; max-width: none }
+                }
+
+                
+                @media (max-width: 768px) {
+                    background-size: 347px 176px;
+                    padding: 1.5em;
+
+                    img {
+                        width: 8em;
+                        height: 6em;
+                    }
+
+                    p { font-size: 0.8em }
+                }
+
+                @media (max-width: 400px) {
+                    background-size: 191px 96px;
+                    padding: 1em 1em 1.5em 1em;
+
+                    img {
+                        width: 7em;
+                        height: 105px;
+                    }
+
+                    p { font-size: 0.7em; max-width: none }
+                }
+            }
+        }
+    }
 }
