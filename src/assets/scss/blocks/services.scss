@@ -3,8 +3,9 @@
 
     h1 {
         margin-bottom: 0.625em;
-        @media (max-width: 400px) { font-size: 24px; padding: 0 25px; }
+        @media (max-width: 400px) { font-size: 24px }
         @media (max-width: 375px) { font-size: 20px }
+        @media (max-width: 350px) { padding: 0 25px }
     }
 
     &__container {
@@ -14,7 +15,7 @@
         margin-top: 3em;
 
         @media (max-width: 768px) { margin-top: 25px }
-        @media (max-width: 400px) { padding: 0 }
+        @media (max-width: 350px) { padding: 0 }
     }
 
     &__paragraph {
@@ -26,17 +27,14 @@
 
         span { color: $franceBlue }
 
-        @media (max-width: 768px) { font-size: 0.8em }
+        @media (max-width: 768px) { font-size: 0.8em; margin-bottom: 3em }
         @media (max-width: 400px) {
             font-size: 0.9em;
-            margin-bottom: 3em;
-            padding: 0 25px; 
+            margin-bottom: 2em;
         }
+        @media (max-width: 350px) { padding: 0 25px }
         @media (max-width: 375px) { font-size: 0.8em }
-
-        @media (max-width: 500px) {
-            max-width: 26em;
-        }
+        @media (max-width: 500px) { max-width: 26em }
     }
 
     &__wrapper {
@@ -94,9 +92,10 @@
             color: $niche;
             width: 100%;
 
-            @media (max-width: 575px) {
-                margin: 30px auto;
-            }
+            display: none;
+
+            @media (max-width: 768px) { display: initial }
+            @media (max-width: 575px) { margin: 30px auto }
         }
 
         &-item {
@@ -635,6 +634,7 @@
             }
 
             &--fiveth {
+                @media (max-width: 575px) { padding-top: 2em }
                 .pointer {
                     &--first {
                         transform: translate(-92%, -460%);

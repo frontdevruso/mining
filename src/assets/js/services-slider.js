@@ -6,30 +6,13 @@ if(document.querySelector('.services__slider')) {
     let servicesSlider = new Swiper(".services__slider", {
         spaceBetween: 400,
         slidesPerView: 1,
-        allowTouchMove: true,
-    
+        allowTouchMove: false,
+
         pagination: {
-            el: ".services__slider-fraction--mb",
+            el: ".services__slider-fraction",
             clickable: true,
             type: "fraction",
         },
-        
-        navigation: {
-            nextEl: ".services__slider-arrow--next",
-            prevEl: ".services__slider-arrow--prev",
-        },
-
-        breakpoints: {
-            768: {
-                allowTouchMove: false,
-
-                pagination: {
-                    el: ".services__slider-fraction",
-                    clickable: true,
-                    type: "fraction",
-                },
-            },
-        }
     });
 
     const arrowsCoolDown = () => {
@@ -83,4 +66,24 @@ if(document.querySelector('.services__slider')) {
         arrowsCoolDown();
         reassignmentActiveLine(5);
     });
+
+    window.onresize = displayWindowSize;
+    window.onload = displayWindowSize;
+
+    function displayWindowSize() {
+        let myWidth = window.innerWidth;
+        if (myWidth <= 768) {
+            let servicesSlider = new Swiper(".services__slider", {
+                spaceBetween: 400,
+                slidesPerView: 1,
+                allowTouchMove: true,
+            
+                pagination: {
+                    el: ".services__slider-fraction--mb",
+                    clickable: true,
+                    type: "fraction",
+                },
+            });
+        }
+    };
 }

@@ -1,5 +1,5 @@
 .contacts {
-    margin-top: 3em;
+    margin-top: 2.5em;
     @media (max-width: 500px) { margin-top: 25px }
 
     &__container {
@@ -10,7 +10,7 @@
     }
 
     &__title {
-        @media (max-width: 500px) { padding: 0 25px }
+        @media (max-width: 575px) { padding: 0 25px }
     }
     
     &__table {
@@ -39,11 +39,10 @@
             height: 16.25em;
 
             justify-content: center;
+            background-size: 85% auto;
         }
 
-        @media (max-width: 992px) {
-            margin: 1.5em 0 11em;
-        }
+        @media (max-width: 992px) { margin: 1.5em 0 10em }
 
         h1 {
             margin-bottom: 0.625em;
@@ -88,12 +87,14 @@
 
                 span {
                     font-size: 0.7em;
+                    width: fit-content;
                     margin-bottom: 10px;
                 }
 
                 a {
                     font-size: 1.6em;
                     transition: .4s;
+                    width: fit-content;
 
                     &:hover { color: #cecece }
 

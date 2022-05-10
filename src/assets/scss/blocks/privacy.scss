@@ -1,6 +1,7 @@
 .privacy {
     margin: 3em 0 5em;
 
+    @media (max-width: 1024px) { margin: 2.5em 0 5em }
     @media (max-width: 758px) { margin: 0 0 5em }
     @media (max-width: 400px) { margin: 0.5em 0 5em }
 
@@ -86,7 +87,11 @@
                 line-height: 150%;
             }
 
-            a { color: $franceBlue }
+            a {
+                color: $franceBlue;
+                transition: .4s;
+                &:hover { color: #2469BB }
+            }
         }
 
         .active {
@@ -94,7 +99,7 @@
             position: initial;
             z-index: 5;
             opacity: 1;
-
+            
             transition: initial;
         }
     }

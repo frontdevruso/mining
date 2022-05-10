@@ -13,13 +13,20 @@
 
         &--second {
             .charts__wrapper {
-                #charImg2 { max-width: 427px }
+                &-chart {
+                    max-width: 550px;
+                    height: 423px;
+
+                    @media (max-width: 1270px) { height: auto }
+                }
+
                 .charts__wrapper-info { margin-right: 0 }
 
                 @media (max-width: 992px) { flex-direction: column-reverse }
                 
                 img {
                     @media (max-width: 575px) { margin-bottom: 2.85em }
+                    @media (max-width: 400px) { margin-bottom: 1.85em }
                 }
             }
         }
@@ -87,6 +94,12 @@
             padding: 2.5em 2.5em 2em;
             background-color: rgba(100, 115, 145, 0.1);
 
+            height: 412px;
+            max-width: 550px;
+            box-sizing: border-box;
+
+            @media (max-width: 1270px) { height: auto }
+
             img {
                 transition: .6s;
                 margin-bottom: 2.5em;
@@ -105,9 +118,7 @@
                 span { color: $franceBlue }
                 @media (max-width: 575px) { font-size: 0.7em }
             }
-
-            @media (max-width: 992px) { width: calc(100% - 100px) }
-            @media (max-width: 575px) { padding: 1.5em 1em; width: calc(100% - 40px) }
+            @media (max-width: 575px) { padding: 1.5em 1em }
         }
     }
 }

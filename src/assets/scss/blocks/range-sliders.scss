@@ -26,10 +26,14 @@
             width: 100%;
             transition: .4s;
 
+            &::placeholder { transition: .2s }
+
             &:hover, &:focus, &:active {
                 border-color: #2B7EE0;
                 color: #2B7EE0;
+            }
 
+            &:focus {
                 &::placeholder { opacity: 0 }
             }
 

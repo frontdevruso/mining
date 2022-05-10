@@ -9,12 +9,18 @@ title: Гормаш Глобал | Магазин
         <div class="store__wrapper">
             <div class="store__wrapper-filters">
                 <div class="store__wrapper-filters-mini-panel">
-                    <form class="store__wrapper-filters-search search-bar">
-                        <div class="store__wrapper-filters-search-input search-bar__input">
-                            <svg><use xlink:href="./assets/images/svg/sprite.svg#searchIcon"></use></svg>
-                            <input class="g-input" type="text" placeholder="Поиск по названию">
-                        </div>
-                    </form>
+                <form class="store__wrapper-filters-search search-bar">
+                    <div class="store__wrapper-filters-search-input search-bar__input">
+                        <svg><use xlink:href="./assets/images/svg/sprite.svg#searchIcon"></use></svg>
+                        <input class="g-input" type="text" placeholder="Поиск по названию">
+                    </div>
+                    <div class="search-bar__hints">
+                        <button type="button" data-product-title="SBM 400">SBM 400</button>
+                        <button type="button" data-product-title="SBM 400 LP">SBM 400 LP</button>
+                        <button type="button" data-product-title="SBM 400 SR">SBM 400 SR</button>
+                        <button type="button" data-product-title="SBM 400 XP">SBM 400 XP</button>
+                    </div>
+                </form>
     
                     <button class="filters-btn" id="filterBtn" type="button">
                         <svg><use xlink:href="./assets/images/svg/sprite.svg#filterIcon"></use></svg>
@@ -48,18 +54,10 @@ title: Гормаш Глобал | Магазин
                     </div>
                     <h3 class="store__wrapper-filters-title">Тип установок</h3>
                     <div class="store__wrapper-filters-checkbox">
-                        <input id="filterElectrical" type="checkbox">
-                        <label for="filterElectrical"><span>Электрические</span></label>
+                        <input id="filterAutoMotive" type="checkbox">
+                        <label for="filterAutoMotive"><span>Самоходные</span></label>
                     </div>
-                    <div class="store__wrapper-filters-checkbox">
-                        <input id="filterGasoline" type="checkbox">
-                        <label for="filterGasoline"><span>Бензиновые / дизельные</span></label>
-                    </div>
-                    <div class="store__wrapper-filters-checkbox">
-                        <input id="filterDinamyc" type="checkbox">
-                        <label for="filterDinamyc"><span>Передвижные / самоходные</span></label>
-                    </div>
-                    <div class="store__wrapper-filters-checkbox">
+                    <div class="store__wrapper-filters-checkbox store__wrapper-filters-checkbox--last">
                         <input id="filterStatic" type="checkbox">
                         <label for="filterStatic"><span>Статические</span></label>
                     </div>

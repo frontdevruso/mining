@@ -53,10 +53,7 @@
         flex-direction: column;
         justify-content: center;
 
-        @media (max-width: 768px) { 
-            width: 18.15em;
-        }
-
+        @media (max-width: 768px) { width: 18.15em }
         @media (max-width: 410px) { width: 100% }
         
         &-img {
@@ -183,10 +180,9 @@
 
         @media (max-width: 410px) { 
             min-width: 0;
-            .main-slider__item-img {
-                height: 13em;
-            }
+            max-width: 258px;
+            .main-slider__item-img { height: 13em }
         }
-
+        @media (max-width: 350px) { max-width: none }
     }
 }
