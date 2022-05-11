@@ -42,14 +42,14 @@
             background-size: 85% auto;
         }
 
-        @media (max-width: 992px) { margin: 1.5em 0 10em }
+        @media (max-width: 992px) { margin: 1.5em 0 12em }
 
         h1 {
             margin-bottom: 0.625em;
             color: $niche;
 
             @media (max-width: 575px) { color: white }
-            @media (max-width: 500px) { margin-bottom: 1em; }
+            @media (max-width: 500px) { margin-bottom: 1em }
         }
 
         p {

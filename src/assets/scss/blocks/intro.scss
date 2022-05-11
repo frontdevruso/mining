@@ -23,10 +23,12 @@
 
         width: 100%;
         max-width: 432px;
+        padding-bottom: 6em;
 
         @media (max-width: 1024px) { 
             margin-top: 5em;
             max-width: none;
+            padding-bottom: 0;
         }
 
         @media (max-width: 768px) { 

@@ -13,6 +13,11 @@ if(document.querySelector('.services__slider')) {
             clickable: true,
             type: "fraction",
         },
+        
+        navigation: {
+            nextEl: ".services__slider-arrow--next",
+            prevEl: ".services__slider-arrow--prev",
+        },
     });
 
     const arrowsCoolDown = () => {
@@ -83,6 +88,64 @@ if(document.querySelector('.services__slider')) {
                     clickable: true,
                     type: "fraction",
                 },
+
+                
+                navigation: {
+                    nextEl: ".services__slider-arrow--next",
+                    prevEl: ".services__slider-arrow--prev",
+                },
+            });
+
+            const arrowsCoolDown = () => {
+                arrowsBtns.forEach(function(btn) {
+                    btn.disabled = true;
+                    setTimeout(function() { btn.disabled = false }, 500);
+                });
+            }
+        
+            const reassignmentActiveLine = (elementIndex) => {
+                navSliderBar.querySelector('.active').classList.remove('active');
+                navSliderBar.querySelector(' :nth-child(' + elementIndex +')').classList.add('active');
+            }
+        
+            const onPrevAddLine = () => {
+                let newLine = document.createElement('span');
+                newLine.classList.add('new-created');
+                navSliderBar.insertBefore(newLine, navSliderBar.firstChild);
+                setTimeout(function() {
+                    newLine.classList.remove('new-created');
+                }, 100);
+        
+                navSliderBar.lastElementChild.classList.add('new-created');
+                setTimeout(function() {
+                    navSliderBar.removeChild(navSliderBar.lastElementChild);
+                }, 400);
+            }
+        
+            const onNextAddLine = () => {
+                let newLine = document.createElement('span');
+                newLine.classList.add('new-created');
+                navSliderBar.insertBefore(newLine, navSliderBar.lastChild);
+                setTimeout(function() {
+                    newLine.classList.remove('new-created');
+                }, 100);
+        
+                navSliderBar.firstElementChild.classList.add('new-created');
+                setTimeout(function() {
+                    navSliderBar.removeChild(navSliderBar.firstElementChild);
+                }, 400);
+            }
+        
+            servicesSlider.on('slidePrevTransitionStart', function() {
+                onPrevAddLine();
+                arrowsCoolDown();
+                reassignmentActiveLine(4);
+            });
+            
+            servicesSlider.on('slideNextTransitionStart', function() {
+                onNextAddLine();
+                arrowsCoolDown();
+                reassignmentActiveLine(5);
             });
         }
     };

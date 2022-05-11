@@ -45,6 +45,7 @@
     &__photos {
         display: flex;
         align-items: center;
+        box-sizing: border-box;
 
         @media (max-width: 1300px) {
             max-width: 1200px;

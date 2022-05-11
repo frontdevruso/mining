@@ -1,5 +1,6 @@
 .instruments {
     margin-bottom: 5em;
+    margin-top: 25px;
 
     @media (max-width: 768px) { margin-top: 25px }
 
@@ -26,7 +27,6 @@
         }
 
         .search-bar {
-            padding: .4em .75em;
             width: 100%;
             max-width: 350px;
 
@@ -72,7 +72,7 @@
                     width: auto;
                     height: auto;
 
-                    transition: .4s;
+                    transition: .8s;
 
                     max-height: 120px;
                     max-width: 165px;
