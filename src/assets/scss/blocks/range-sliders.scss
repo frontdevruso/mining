@@ -134,7 +134,21 @@
             height: 50px;
         }
 
-        &:hover, &:focus, &:active {
+        &:hover {
+            .noUi-touch-area {
+                width: 20px;
+                height: 20px;
+                
+                background-color: #131E33;
+    
+                &::after {
+                    width: 59%;
+                    height: 59%;
+                }
+            }
+        }
+
+        &.active {
             .noUi-touch-area {
                 width: 20px;
                 height: 20px;

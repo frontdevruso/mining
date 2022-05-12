@@ -21,4 +21,15 @@ if (filterPanel) {
             item.classList.remove('active');
         });
     });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('.noUi-handle').forEach(function(rangeBtn) {
+            rangeBtn.addEventListener('touchstart', function() { this.classList.add('active') })
+            rangeBtn.addEventListener('touchend', function() { this.classList.remove('active') })
+        });
+    })
+
+    document.addEventListener('DOMSubtreeModified', function() {
+        console.log('DOMSubtreeModified');
+    })
 }

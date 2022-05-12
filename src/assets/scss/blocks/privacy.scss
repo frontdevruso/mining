@@ -1,9 +1,9 @@
 .privacy {
-    margin: 3em 0 5em;
+    margin: 2.5em 0 5em;
 
     @media (max-width: 1024px) { margin: 2.5em 0 5em }
-    @media (max-width: 758px) { margin: 0 0 5em }
-    @media (max-width: 400px) { margin: 0.5em 0 5em }
+    @media (max-width: 758px) { margin: 2.5em 0 5em }
+    @media (max-width: 400px) { margin: 1.25em 0 5em }
 
     h1 {
         max-width: 761px;
