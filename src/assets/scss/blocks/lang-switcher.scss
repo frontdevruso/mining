@@ -6,7 +6,7 @@
     &--menu {
         width: 100%;
         padding-top: 40px;
-        padding-bottom: 56px;
+        margin-top: auto;
 
         .lang-switcher__btn {
             border-bottom: none;
@@ -18,7 +18,7 @@
         }
 
         @supports (-webkit-touch-callout: none) {
-            padding-bottom: 70px;
+            padding-bottom: 80px;
             .lang-switcher__btn {
                 height: 70px;
                 border: 1px solid $franceBlue;

@@ -25,4 +25,6 @@
             top: -10%;
         }
     }
+    
+    @supports (-webkit-touch-callout: none) { display: none }
 }

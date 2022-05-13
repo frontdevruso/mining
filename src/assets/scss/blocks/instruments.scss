@@ -115,7 +115,6 @@
 
                 transition: .4s;
                 margin-top: auto;
-                padding-top: 5px;
 
                 b { color: $franceBlue; font-weight: 400 }
 
@@ -240,6 +239,8 @@
             img {
                 max-width: 90%;
                 max-height: none;
+
+                @media (max-width: 550px) { max-height: 185px }
             }
         }
     }

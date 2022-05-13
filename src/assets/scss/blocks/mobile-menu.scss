@@ -1,10 +1,11 @@
 .menu {
-    height: 100%;
+    height: 100vh;
     font-size: 20px;
 
     overflow-y: auto;
     display: none;
     background-color: $voidBlack;
+    
     
     @media (max-width: 1024px) { display: none }
     @media (max-width: 450px) { font-size: 18px }
@@ -13,12 +14,9 @@
     &__container {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
-        height: 100%;
-
-        @supports (-webkit-touch-callout: none) {
-            height: initial;
-        }
+        
+        height:  100%;
+        min-height: fit-content;
     }
 
     ul {

@@ -21,6 +21,9 @@
         padding-left: 50px;
 
         opacity: 0;
+        width: 400px;
+
+        overflow: initial;
     }
 
     @media (max-width: 575px) { height: fit-content }
