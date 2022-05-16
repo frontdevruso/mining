@@ -1,5 +1,6 @@
 let swiperEquipment = new Swiper(".equipment-slider", {
     spaceBetween: 20,
+    autoHeight: true,
 
     pagination: {
         el: ".equipment-slider-fraction",

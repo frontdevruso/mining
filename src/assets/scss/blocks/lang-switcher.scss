@@ -5,8 +5,10 @@
 
     &--menu {
         width: 100%;
-        padding-top: 40px;
-        margin-top: auto;
+        padding-top: 20px;
+
+        position: fixed;
+        bottom: 0;
 
         .lang-switcher__btn {
             border-bottom: none;
@@ -15,6 +17,7 @@
             padding: 25px 77px;
             font-size: 18px;
             border: 1px solid $franceBlue;
+            background-color: $voidBlack;
         }
 
         @supports (-webkit-touch-callout: none) {
