@@ -1,4 +1,3 @@
-import IMask from 'imask';
 const tels = document.querySelectorAll("input[type=\"tel\"]");
 
 tels.forEach(el => {
