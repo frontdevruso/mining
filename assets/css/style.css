@@ -2317,7 +2317,8 @@ input:focus, textarea:focus, button:focus {
         margin-bottom: 3em;
         width: 100%;
         min-width: 100%;
-        overflow-x: scroll; }
+        overflow-x: scroll;
+        overflow-y: hidden; }
         @media (max-width: 400px) {
           .store__wrapper-filters ul {
             margin-bottom: 2.5em; } }
@@ -2654,7 +2655,10 @@ input:focus, textarea:focus, button:focus {
       padding: 10px 15px;
       line-height: 1;
       width: 100%;
-      transition: .4s; }
+      transition: .4s;
+      appearance: textfield !important;
+      -webkit-appearance: textfield;
+      -moz-appearance: textfield; }
       .range-slider__inputs input::placeholder {
         transition: .2s; }
       .range-slider__inputs input:hover, .range-slider__inputs input:focus, .range-slider__inputs input:active {
