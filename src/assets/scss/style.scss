@@ -40,9 +40,7 @@ body {
 }
 
 .f-open {
-    @media (max-width: 1024px) { 
-        overflow: hidden;
-    }
+    @media (max-width: 1024px) { overflow: hidden }
 }
 
 @import 'fonts';

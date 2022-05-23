@@ -25,6 +25,9 @@
 
             width: 100%;
             transition: .4s;
+            appearance: textfield !important;
+            -webkit-appearance: textfield;
+            -moz-appearance: textfield ;
 
             &::placeholder { transition: .2s }
 
