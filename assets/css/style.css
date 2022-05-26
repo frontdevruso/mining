@@ -2398,7 +2398,8 @@ input:focus, textarea:focus, button:focus {
             right: 0;
             bottom: 0;
             left: 0;
-            overflow: scroll;
+            overflow-y: scroll;
+            overflow-x: hidden;
             height: 100vh;
             min-height: 100%;
             z-index: -25;
@@ -2548,7 +2549,6 @@ input:focus, textarea:focus, button:focus {
           .store__wrapper-filters-btns {
             padding-bottom: 30px; } }
       .store__wrapper-filters-apply {
-        display: none;
         background-color: #647391;
         color: white;
         border: none;
