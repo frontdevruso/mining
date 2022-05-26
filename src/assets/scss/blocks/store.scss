@@ -141,10 +141,12 @@
 
                     top: 0;right: 0;
                     bottom: 0;left: 0;
-                    overflow : scroll;
+
+                    overflow-y: scroll;
+                    overflow-x: hidden;
+
                     height: 100vh;
                     min-height: 100%;
-                    
                     z-index: -25;
                     opacity: 0;
 
@@ -351,8 +353,6 @@
             }
 
             &-apply {
-                display: none;
-
                 background-color: $niche;
                 color: white;
                 border: none;

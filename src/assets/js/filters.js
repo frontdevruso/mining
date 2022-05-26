@@ -28,8 +28,4 @@ if (filterPanel) {
             rangeBtn.addEventListener('touchend', function() { this.classList.remove('active') })
         });
     })
-
-    document.addEventListener('DOMSubtreeModified', function() {
-        console.log('DOMSubtreeModified');
-    })
 }
