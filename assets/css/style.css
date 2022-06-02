@@ -155,8 +155,9 @@ input:focus, textarea:focus, button:focus {
   .header-absolute .header {
     position: absolute;
     top: 0;
-    width: 100vw;
-    overflow: hidden; }
+    width: 100vw; }
+    .header-absolute .header .header__drop-down-head-item ul {
+      overflow: hidden; }
 
 .container__1200px {
   width: 100%;
@@ -1360,7 +1361,8 @@ input:focus, textarea:focus, button:focus {
       background-position: top right;
       display: flex;
       flex-direction: column;
-      padding: 2.5em; }
+      padding: 2.5em;
+      height: fit-content; }
       .partners--main .partners__wrapper-item img {
         width: 8em;
         height: 6em;
@@ -1375,28 +1377,35 @@ input:focus, textarea:focus, button:focus {
       .partners--main .partners__wrapper-item a {
         display: flex;
         align-items: center;
-        width: fit-content; }
+        overflow: hidden;
+        width: fit-content;
+        transition: .3s; }
+        .partners--main .partners__wrapper-item a.hide {
+          opacity: 0;
+          visibility: hidden; }
+        .partners--main .partners__wrapper-item a.h-none {
+          height: 0; }
         .partners--main .partners__wrapper-item a span {
           color: #2B7EE0;
           font-size: 0.7em;
           display: flex;
           align-items: center; }
-          .partners--main .partners__wrapper-item a span::after {
-            content: "";
-            display: block;
-            width: 0;
-            height: 1px;
-            transition: .4s;
-            margin: 0 2px 0 5px;
-            background-color: #2B7EE0; }
         .partners--main .partners__wrapper-item a svg {
           stroke: #2B7EE0;
           width: 10px;
           height: 5px;
-          margin-top: 0;
-          margin-left: 0; }
-        .partners--main .partners__wrapper-item a:hover span::after {
-          width: 20px; }
+          margin: 2px 0 0 7px; }
+        .partners--main .partners__wrapper-item a:hover svg {
+          transform: rotate(360deg); }
+      .partners--main .partners__wrapper-item main {
+        overflow: hidden;
+        opacity: 0;
+        height: 0;
+        display: flex;
+        flex-direction: column; }
+        .partners--main .partners__wrapper-item main.show {
+          opacity: 1;
+          height: 100%; }
       @media (max-width: 1024px) {
         .partners--main .partners__wrapper-item {
           background-size: 191px 96px;
