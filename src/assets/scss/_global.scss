@@ -61,7 +61,7 @@ input:focus, textarea:focus, button:focus { outline: none }
         top: 0;
 
         width: 100vw;
-        overflow: hidden;
+        .header__drop-down-head-item ul { overflow: hidden }
     }
 }
 
