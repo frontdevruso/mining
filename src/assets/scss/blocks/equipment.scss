@@ -2,6 +2,8 @@
     display: flex;
     margin-bottom: 5em;
 
+    min-height: 100%;
+
     @media (max-width: 1300px) { font-size: 0.9em }
     @media (max-width: 1150px) { font-size: 0.8em }
     @media (max-width: 1024px) { font-size: 1em }
@@ -21,13 +23,10 @@
         }
     }
 
-
     &__table {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-gap: 1em;
-
-        height: fit-content;
 
         &-item {
             border: 0.05em solid $niche;

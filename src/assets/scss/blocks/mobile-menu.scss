@@ -20,18 +20,18 @@
         justify-content: space-between;
 
         overflow-y: auto;
-        
-        height:  100%;
-        min-height: fit-content;
+        height: 100%;
     }
 
     &__links {
-        overflow: auto;
-        height: auto;
+        overflow-y: auto;
+        height: 100%;
 
         padding-top: 130px;
         padding-bottom: 40px;
+        
         @media (max-width: 575px) { padding-top: 100px }
+        @supports (-webkit-touch-callout: none) { padding-bottom: 70px }
         
         li {
             transition: .4s;

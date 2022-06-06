@@ -19,14 +19,6 @@
             border: 1px solid $franceBlue;
             background-color: $voidBlack;
         }
-
-        @supports (-webkit-touch-callout: none) {
-            padding-bottom: 80px;
-            .lang-switcher__btn {
-                height: 70px;
-                border: 1px solid $franceBlue;
-            }
-        }
     }
 
     &__btn {
