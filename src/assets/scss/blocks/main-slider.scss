@@ -103,6 +103,8 @@
                 line-height: 150%;
 
                 margin-bottom: 1.42em;
+                min-width: 300px;
+                min-height: 60px;
     
                 b { color: $franceBlue; font-style: italic }
 
@@ -110,6 +112,11 @@
                 display: -webkit-box;
                 -webkit-line-clamp: 5;
                 overflow: hidden;
+                
+                @media (max-width: 768px) { 
+                    min-width: initial;
+                    min-height: initial;
+                }
             }
 
             a {
